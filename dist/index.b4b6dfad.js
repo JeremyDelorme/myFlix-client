@@ -21871,22 +21871,40 @@ class MainView extends _reactDefault.default.Component {
     constructor(){
         super();
         this.state = {
-            movies: [],
-            // { _id: 1, Title: 'Inception', Description: 'desc1...', ImagePath: '...' },
-            // { _id: 2, Title: 'The Shawshank Redemption', Description: 'desc2...', ImagePath: '...' },
-            // { _id: 3, Title: 'Gladiator', Description: 'desc3...', ImagePath: '...' }
+            movies: [
+                {
+                    _id: 1,
+                    Title: 'Inception',
+                    Description: 'desc1...',
+                    ImagePath: '...'
+                },
+                {
+                    _id: 2,
+                    Title: 'The Shawshank Redemption',
+                    Description: 'desc2...',
+                    ImagePath: '...'
+                },
+                {
+                    _id: 3,
+                    Title: 'Gladiator',
+                    Description: 'desc3...',
+                    ImagePath: '...'
+                }
+            ],
             selectedMovie: null
         };
     }
-    componentDidMount() {
-        _axiosDefault.default.get('https://movie-api-jeremydelorme.herokuapp.com/movies').then((response)=>{
-            this.setState({
-                movies: response.data
-            });
-        }).catch((error)=>{
-            console.log(error);
-        });
-    }
+    // componentDidMount() {
+    //     axios.get('https://movie-api-jeremydelorme.herokuapp.com/movies')
+    //         .then(response => {
+    //             this.setState({
+    //                 movies: response.data
+    //             });
+    //         })
+    //         .catch(error => {
+    //             console.log(error);
+    //         });
+    // }
     setSelectedMovie(newSelectedMovie) {
         this.setState({
             selectedMovie: newSelectedMovie
@@ -21899,7 +21917,7 @@ class MainView extends _reactDefault.default.Component {
             children: "The list is empty!"
         }, void 0, false, {
             fileName: "src/components/main-view/main-view.jsx",
-            lineNumber: 40,
+            lineNumber: 41,
             columnNumber: 41
         }, this);
         return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -21911,7 +21929,7 @@ class MainView extends _reactDefault.default.Component {
                 }
             }, void 0, false, {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 45,
+                lineNumber: 46,
                 columnNumber: 23
             }, this) : movies.map((movie1)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_movieCard.MovieCard, {
                     movie: movie1,
@@ -21920,13 +21938,13 @@ class MainView extends _reactDefault.default.Component {
                     }
                 }, movie1._id, false, {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 47,
+                    lineNumber: 48,
                     columnNumber: 25
                 }, this)
             )
         }, void 0, false, {
             fileName: "src/components/main-view/main-view.jsx",
-            lineNumber: 43,
+            lineNumber: 44,
             columnNumber: 13
         }, this);
     }
