@@ -24554,6 +24554,6 @@ class MovieView extends _reactDefault.default.Component {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA","react/jsx-dev-runtime":"iTorj"}],"lJZlQ":[function() {},{}]},["93xK8","cwVHf","d8Dch"], "d8Dch", "parcelRequire94c2")
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA","react/jsx-dev-runtime":"iTorj"}],"lJZlQ":[function() {},{}]},["93xK8","cwVHf","d8Dch"], "d8Dch", "parcelRequireaec4")
 
 //# sourceMappingURL=index.b4b6dfad.js.map
