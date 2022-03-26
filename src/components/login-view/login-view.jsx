@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import './login-view.scss';
 
 export function LoginView(props) {
     const [username, setUsername] = useState('');
@@ -14,16 +14,27 @@ export function LoginView(props) {
     };
 
     return (
-        <form>
-            <label>
-                Username:
-                <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
-            </label>
-            <label>
-                Password:
-                <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-            </label>
-            <button type="submit" onClick={handleSubmit}>Submit</button>
-        </form>
+
+        < div className="main" >
+
+            <input type="checkbox" id="chk" aria-hidden="true" />
+            <div className="signup">
+                <form>
+                    <label htmlFor="chk" aria-hidden="true">MyFlix</label>
+                    <input type="text" name="txt" placeholder="User name" value={username} onChange={e => setUsername(e.target.value)} required="" />
+                    <input type="password" name="pswd" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required="" />
+                    <button type="submit" onClick={handleSubmit}>Login</button>
+                </form>
+            </div>
+            <div className="login">
+                <form>
+                    <label htmlFor="chk" aria-hidden="true">Sign up</label>
+                    <input type="text" name="txt" placeholder="User name" value={username} onChange={e => setUsername(e.target.value)} required="" />
+                    {/* <input type="email" name="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required=""></input> */}
+                    <input type="password" name="pswd" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required="" />
+                    <button type="submit" onClick={handleSubmit}>Sign up</button>
+                </form>
+            </div>
+        </div>
     );
 }

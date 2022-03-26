@@ -18,15 +18,15 @@ export class MainView extends React.Component {
     }
 
     componentDidMount() {
-        // axios.get('https://movie-api-jeremydelorme.herokuapp.com/movies')
-        //     .then(response => {
-        //         this.setState({
-        //             movies: response.data
-        //         });
-        //     })
-        //     .catch(error => {
-        //         console.log(error);
-        //     });
+        axios.get('https://movie-api-jeremydelorme.herokuapp.com/movies')
+            .then(response => {
+                this.setState({
+                    movies: response.data
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
     }
 
     setSelectedMovie(movie) {
@@ -55,13 +55,32 @@ export class MainView extends React.Component {
                 {/*If the state of `selectedMovie` is not null, that selected movie will be returned otherwise, all *movies will be returned*/}
                 {selectedMovie
                     ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
-                    : movies.map(movie => (
-                        <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }} />
+                    : movies.map((movie, index) => (
+                        <MovieCard key={movie._id} movie={movie} index={index} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }} />
                     ))
                 }
             </div>
         );
     }
+}
+
+MainView.propTypes = {
+    movie: PropTypes.shape({
+        Title: PropTypes.string.isRequired,
+        Description: PropTypes.string.isRequired,
+        Genre: PropTypes.shape({
+            Name: PropTypes.string.isRequired,
+            Description: PropTypes.string.isRequired
+        }),
+        Director: PropTypes.shape({
+            Name: PropTypes.string.isRequired,
+            Birth: PropTypes.string.isRequired,
+            Death: PropTypes.string.isRequired
+        }),
+        ImagePath: PropTypes.string.isRequired
+    }).isRequired,
+    index: PropTypes.number.isRequired,
+    onMovieClick: PropTypes.func.isRequired
 }
 
 export default MainView;
