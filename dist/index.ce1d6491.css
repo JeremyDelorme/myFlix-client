@@ -6,4 +6,41 @@
   color: #391be4;
 }
 
+
+
+.moviesContainer {
+  width: 100%;
+  height: 100vh;
+  background: #5c1818;
+}
+
+.movie-view {
+  color: #fff;
+  margin-top: 50px;
+}
+
+.movie-poster {
+  text-align: center;
+}
+
+.title, .description, .genre, .director, .actors, .year {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.movie-button-div {
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.movie-button {
+  width: 100%;
+  background-color: #000;
+  margin-top: 20px;
+}
+
+
+
 /*# sourceMappingURL=index.ce1d6491.css.map */
