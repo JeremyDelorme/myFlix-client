@@ -23,7 +23,6 @@ export class MovieView extends React.Component {
                     <Col>
                         <Card id="movie-view">
                             <Card.Body>
-                                <Card.Img id="movie-view-image" variant="top" src={movie.ImagePath} />
                                 <Card.Title id="movie-title" className="movie-title">{movie.Title}</Card.Title>
                                 <Card.Text id="movie-description" className="movie-description">
                                     {movie.Description}</Card.Text>
@@ -31,7 +30,7 @@ export class MovieView extends React.Component {
                                     Director: {movie.Director.Name}</Card.Text>
                                 <Card.Text id="movie-genre" className="movie-gerne">
                                     Genre: {movie.Genre.Name}</Card.Text>
-
+                                <Card.Img id="movie-view-image" variant="top" src={movie.ImagePath} />
                             </Card.Body>
                         </Card>
                         <Button id="movie-view-button" onClick={() => { onBackClick(null); }}>Back</Button>
@@ -56,5 +55,7 @@ MovieView.propTypes = {
             Birth: PropTypes.string.isRequired
         }),
         ImagePath: PropTypes.string.isRequired
-    }).isRequired
+    }).isRequired,
+
+    onBackClick: PropTypes.string.isRequired
 };
