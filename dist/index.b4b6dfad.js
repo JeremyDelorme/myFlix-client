@@ -22915,7 +22915,7 @@ class MainView extends _reactDefault.default.Component {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","axios":"jo6P5","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA","../login-view/login-view":"9YtA0","../registration-view/registration-view":"3U8r7","react-bootstrap":"3AD9A","./main-view.scss":"eBaMl"}],"jo6P5":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","axios":"jo6P5","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA","../login-view/login-view":"9YtA0","react-bootstrap":"3AD9A","./main-view.scss":"eBaMl","../registration-view/registration-view":"3U8r7"}],"jo6P5":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"63MyY"}],"63MyY":[function(require,module,exports) {
@@ -27708,7 +27708,7 @@ $RefreshReg$(_c, "LoginView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA","react-bootstrap/Form":"iBZ80","react-bootstrap/Button":"aPzUt","prop-types":"7wKI2"}],"3U8r7":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA","prop-types":"7wKI2","react-bootstrap/Form":"iBZ80","react-bootstrap/Button":"aPzUt"}],"eBaMl":[function() {},{}],"3U8r7":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$789c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27895,6 +27895,6 @@ $RefreshReg$(_c, "RegistrationView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA","react-bootstrap":"3AD9A","prop-types":"7wKI2"}],"eBaMl":[function() {},{}]},["93xK8","cwVHf","d8Dch"], "d8Dch", "parcelRequireaec4")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA"}]},["93xK8","cwVHf","d8Dch"], "d8Dch", "parcelRequireaec4")
 
 //# sourceMappingURL=index.b4b6dfad.js.map
