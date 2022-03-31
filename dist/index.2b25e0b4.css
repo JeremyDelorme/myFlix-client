@@ -1,0 +1,100 @@
+
+
+.register-title {
+  color: #000;
+}
+
+.register-card {
+  background-color: #fddada;
+}
+
+.register-card-label {
+  color: #000;
+}
+
+.register-button {
+  background-color: #af2e07;
+  margin-top: 20px;
+}
+
+.login-card {
+  background-color: #fddada;
+}
+
+.login-button {
+  background-color: #af2e07;
+  margin-top: 20px;
+}
+
+.movie-card {
+  width: 500px;
+  height: 700px;
+  text-align: center;
+  cursor: pointer;
+  background: #fddada;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 10px 10px 300px;
+  font-weight: bold;
+  box-shadow: 5px 20px 30px #000;
+}
+
+.movie-title {
+  color: #0c0c0c;
+  justify-content: center;
+  padding-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.movie-image {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+}
+
+.card-button {
+  color: #ad2e0e;
+  font-size: 1.5em;
+}
+
+.movie-view {
+  width: 800px;
+  height: 700px;
+  text-align: center;
+  cursor: pointer;
+  background: #fddada;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  padding: 10px 10px 300px;
+  font-weight: bold;
+  box-shadow: 5px 20px 30px #000;
+}
+
+.movie-view-title {
+  color: #0c0c0c;
+  justify-content: center;
+  padding-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.movie-view-image {
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.movie-view-button {
+  color: #ad2e0e;
+  background-color: #fddada;
+  font-size: 1.5em;
+}
+
+html, body, .app-container {
+  background-color: #802703;
+}
+
+/*# sourceMappingURL=index.2b25e0b4.css.map */
