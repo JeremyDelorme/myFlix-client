@@ -35012,91 +35012,193 @@ $parcel$ReactRefreshHelpers$8284.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "NavbarView", ()=>NavbarView
-);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _navbarViewScss = require("./navbar-view.scss");
-var _reactBootstrap = require("react-bootstrap");
-function NavbarView({ user  }) {
-    const onLoggedOut = ()=>{
-        localStorage.clear();
-        window.open('/', '_self');
-    };
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Navbar, {
-        id: "navbar",
-        fixed: "top",
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Container, {
-            id: "navbar-container",
-            children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Navbar.Brand, {
-                    id: "navbar-brand",
-                    href: "#",
-                    children: "myFlix"
+const Navbar = ()=>{
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("nav", {
+        className: "navbar navbar-expand-lg navbar-light bg-light",
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
+                className: "navbar-brand",
+                href: "#",
+                children: "Navbar"
+            }, void 0, false, {
+                fileName: "src/components/navbar-view/navbar-view.jsx",
+                lineNumber: 6,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                className: "navbar-toggler",
+                type: "button",
+                "data-toggle": "collapse",
+                "data-target": "#navbarNavDropdown",
+                "aria-controls": "navbarNavDropdown",
+                "aria-expanded": "false",
+                "aria-label": "Toggle navigation",
+                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                    className: "navbar-toggler-icon"
                 }, void 0, false, {
-                    fileName: "src/components/navbar-view/navbar-view.jsx",
-                    lineNumber: 17,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Nav, {
-                    id: "nav",
-                    className: "me-auto",
-                    children: [
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Nav.Link, {
-                            id: "nav-link",
-                            href: "#home",
-                            children: "Account"
-                        }, void 0, false, {
-                            fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 19,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Nav.Link, {
-                            id: "nav-link",
-                            href: "#features",
-                            children: "Watchlist"
-                        }, void 0, false, {
-                            fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 20,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Nav.Link, {
-                            id: "nav-link",
-                            href: "#pricing",
-                            children: "Register"
-                        }, void 0, false, {
-                            fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 21,
-                            columnNumber: 21
-                        }, this)
-                    ]
-                }, void 0, true, {
                     fileName: "src/components/navbar-view/navbar-view.jsx",
                     lineNumber: 18,
                     columnNumber: 17
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/navbar-view/navbar-view.jsx",
-            lineNumber: 16,
-            columnNumber: 13
-        }, this)
-    }, void 0, false, {
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/navbar-view/navbar-view.jsx",
+                lineNumber: 9,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                className: "collapse navbar-collapse",
+                id: "navbarNavDropdown",
+                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("ul", {
+                    className: "navbar-nav",
+                    children: [
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
+                            className: "nav-item active",
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
+                                className: "nav-link",
+                                href: "#",
+                                children: [
+                                    "Home ",
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                                        className: "sr-only",
+                                        children: "(current)"
+                                    }, void 0, false, {
+                                        fileName: "src/components/navbar-view/navbar-view.jsx",
+                                        lineNumber: 25,
+                                        columnNumber: 34
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/navbar-view/navbar-view.jsx",
+                                lineNumber: 24,
+                                columnNumber: 25
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/navbar-view/navbar-view.jsx",
+                            lineNumber: 23,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
+                            className: "nav-item",
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
+                                className: "nav-link",
+                                href: "#",
+                                children: "Features"
+                            }, void 0, false, {
+                                fileName: "src/components/navbar-view/navbar-view.jsx",
+                                lineNumber: 29,
+                                columnNumber: 25
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/navbar-view/navbar-view.jsx",
+                            lineNumber: 28,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
+                            className: "nav-item",
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
+                                className: "nav-link",
+                                href: "#",
+                                children: "Pricing"
+                            }, void 0, false, {
+                                fileName: "src/components/navbar-view/navbar-view.jsx",
+                                lineNumber: 34,
+                                columnNumber: 25
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/navbar-view/navbar-view.jsx",
+                            lineNumber: 33,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
+                            className: "nav-item dropdown",
+                            children: [
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
+                                    className: "nav-link dropdown-toggle",
+                                    href: "#",
+                                    id: "navbarDropdownMenuLink",
+                                    "data-toggle": "dropdown",
+                                    "aria-haspopup": "true",
+                                    "aria-expanded": "false",
+                                    children: "Dropdown link"
+                                }, void 0, false, {
+                                    fileName: "src/components/navbar-view/navbar-view.jsx",
+                                    lineNumber: 39,
+                                    columnNumber: 25
+                                }, undefined),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                    className: "dropdown-menu",
+                                    "aria-labelledby": "navbarDropdownMenuLink",
+                                    children: [
+                                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
+                                            className: "dropdown-item",
+                                            href: "#",
+                                            children: "Action"
+                                        }, void 0, false, {
+                                            fileName: "src/components/navbar-view/navbar-view.jsx",
+                                            lineNumber: 53,
+                                            columnNumber: 29
+                                        }, undefined),
+                                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
+                                            className: "dropdown-item",
+                                            href: "#",
+                                            children: "Another action"
+                                        }, void 0, false, {
+                                            fileName: "src/components/navbar-view/navbar-view.jsx",
+                                            lineNumber: 56,
+                                            columnNumber: 29
+                                        }, undefined),
+                                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
+                                            className: "dropdown-item",
+                                            href: "#",
+                                            children: "Something else here"
+                                        }, void 0, false, {
+                                            fileName: "src/components/navbar-view/navbar-view.jsx",
+                                            lineNumber: 59,
+                                            columnNumber: 29
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/navbar-view/navbar-view.jsx",
+                                    lineNumber: 49,
+                                    columnNumber: 25
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/navbar-view/navbar-view.jsx",
+                            lineNumber: 38,
+                            columnNumber: 21
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/navbar-view/navbar-view.jsx",
+                    lineNumber: 22,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/navbar-view/navbar-view.jsx",
+                lineNumber: 21,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/components/navbar-view/navbar-view.jsx",
-        lineNumber: 15,
+        lineNumber: 5,
         columnNumber: 9
-    }, this);
-}
-_c = NavbarView;
+    }, undefined);
+};
+_c = Navbar;
+exports.default = Navbar;
 var _c;
-$RefreshReg$(_c, "NavbarView");
+$RefreshReg$(_c, "Navbar");
 
   $parcel$ReactRefreshHelpers$8284.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./navbar-view.scss":"cYTZj","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA"}],"cYTZj":[function() {},{}],"lJZlQ":[function() {},{}]},["93xK8","cwVHf","d8Dch"], "d8Dch", "parcelRequireaec4")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA"}],"lJZlQ":[function() {},{}]},["93xK8","cwVHf","d8Dch"], "d8Dch", "parcelRequireaec4")
 
 //# sourceMappingURL=index.b4b6dfad.js.map
