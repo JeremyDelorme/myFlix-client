@@ -1,36 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import "./movie-card.scss"
+
+import { CardGroup, Container, Button, Card } from "react-bootstrap"
 
 export class MovieCard extends React.Component {
     render() {
         const { movie, onMovieClick } = this.props;
 
         return (
-            <div onClick={() => onMovieClick(movie)} className="movie-card">{movie.Title}</div>
-        );
-    }
+            <Container>
+                <CardGroup>
+                    <Card id="movie-card">
+                        <Card.Body>
+                            <Card.Title id="card-title">{movie.Title}</Card.Title>
+                            <Button id="card-button" onClick={() => onMovieClick(movie)} variant="link">Show more</Button>
+                        </Card.Body>
+                        <a><Card.Img variant="top" src={movie.ImagePath} /></a>
+                    </Card>
+                </CardGroup>
+            </Container>
+        )
+    };
 }
 
 MovieCard.propTypes = {
     movie: PropTypes.shape({
-        Title: PropTypes.string.isRequired,
-        Description: PropTypes.string.isRequired,
-        Genre: PropTypes.shape({
-            Name: PropTypes.string.isRequired,
-            Description: PropTypes.string.isRequired
-        }),
-        Director: PropTypes.shape({
-            Name: PropTypes.string.isRequired,
-            Birth: PropTypes.string.isRequired,
-            Death: PropTypes.string.isRequired
-        }),
-        ImagePath: PropTypes.string.isRequired
+        Title: PropTypes.string.isRequired
     }).isRequired,
     onMovieClick: PropTypes.func.isRequired
 };
-
-
-Title
-Description
-Genre
-Director 
