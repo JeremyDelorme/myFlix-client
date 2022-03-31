@@ -1,45 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import './navbar-view.scss';
 
-const Navbar = () => {
+import { Navbar, Container, Nav, Button, Offcanvas, NavDropdown, Form, FormControl } from 'react-bootstrap';
+
+
+export function NavbarView({ user }) {
+
+    const onLoggedOut = () => {
+        localStorage.clear();
+        window.open('/', '_self');
+    };
+
     return (
-        <>
-            <Nav>
-                <NavLogo to="/">
-                    Logo
-                </NavLogo>
-                <Bars />
-
-                <NavMenu>
-                    <NavLink
-                        to="/"
-                        activeStyle={{ color: 'black' }}
-                    >
-                        Home
-                    </NavLink>
-                    <NavLink
-                        to="/about"
-                        activeStyle={{ color: 'black' }}
-                    >
-                        About
-                    </NavLink>
-                    <NavLink
-                        to="/contact"
-                        activeStyle={{ color: 'black' }}
-                    >
-                        Contact
-                    </NavLink>
-                    <NavLink
-                        to="/signin"
-                        activeStyle={{ color: 'black' }}
-                    >
-                        Sign In
-                    </NavLink>
-                    <NavBtn>
-                        <NavBtnLink to="/sign-up">Sign Up</NavBtnLink>
-                    </NavBtn>
-                </NavMenu>
-            </Nav>
-        </>
-    );
-};
-export default Navbar;
+        <Navbar id="navbar" fixed="top">
+            <Container id="navbar-container">
+                <Navbar.Brand id="navbar-brand" href="#">myFlix</Navbar.Brand>
+                <Nav id="nav" className="me-auto">
+                    <Nav.Link id="nav-link" href="#home">Account</Nav.Link>
+                    <Nav.Link id="nav-link" href="#features">Watchlist</Nav.Link>
+                    <Nav.Link id="nav-link" href="#pricing">Register</Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
+    )
+}

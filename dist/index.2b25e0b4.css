@@ -93,6 +93,46 @@
   font-size: 1.5em;
 }
 
+:root {
+  --fontsize-navbar-brand: 30px;
+  --fontsize-navbar-link: 20px;
+  --fontweight-navbar-brand: 900;
+  --fontweight-navbar-link: 600;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: League Spartan, sans-serif;
+}
+
+#navbar {
+  background-color: #e5383b;
+  border: none;
+  margin-bottom: 10px;
+}
+
+#navbar-container {
+  background-color: #e5383b;
+  margin: 0;
+}
+
+#navbar-brand {
+  background-color: #e5383b;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+#nav {
+  background-color: #e5383b;
+}
+
+#nav-link {
+  color: #020402;
+  background-color: #e5383b;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 html, body, .app-container {
   background-color: #802703;
 }
