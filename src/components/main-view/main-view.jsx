@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Col, Row, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, Col, Row } from 'react-bootstrap';
 import "./main-view.scss"
 
 import { RegistrationView } from '../registration-view/registration-view';

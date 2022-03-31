@@ -1,66 +1,100 @@
-.my-flix {
-  color: #0d80df;
-}
-
-.app-container {
-  color: #391be4;
+html, body, .app-container {
+  background-color: #802703;
 }
 
 .movie-card {
-  width: 350px;
-  height: 20px;
+  width: 500px;
+  height: 700px;
   text-align: center;
   cursor: pointer;
-  background: #e0dede;
+  background: #fddada;
   border-radius: 10px;
   margin-top: 5px;
-  padding: 10px;
+  padding: 10px 10px 300px;
   font-weight: bold;
   box-shadow: 5px 20px 30px #000;
 }
 
-.movie-card-titles {
-  color: #fff;
+.movie-title {
+  color: #0c0c0c;
   justify-content: center;
   padding-bottom: 30px;
   font-size: 2.5em;
   font-weight: bold;
-  display: flex;
 }
 
-.moviesContainer {
-  width: 100%;
-  height: 100vh;
-  background: #5c1818;
+.movie-image {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+}
+
+.card-button {
+  color: #ad2e0e;
+  font-size: 1.5em;
 }
 
 .movie-view {
-  color: #fff;
-  margin-top: 50px;
-}
-
-.movie-poster {
+  width: 800px;
+  height: 700px;
   text-align: center;
+  cursor: pointer;
+  background: #fddada;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  padding: 10px 10px 300px;
+  font-weight: bold;
+  box-shadow: 5px 20px 30px #000;
 }
 
-.title, .description, .genre, .director, .actors, .year {
-  color: #000;
-  font-size: 20px;
-  font-weight: 400;
+.movie-view-title {
+  color: #0c0c0c;
+  justify-content: center;
+  padding-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
-.movie-button-div {
+.movie-view-image {
+  height: 300px;
+  width: 300px;
   text-align: center;
-  width: 200px;
-  margin: 0 auto;
+  padding-bottom: 20px;
 }
 
-.movie-button {
-  width: 100%;
-  background-color: #000;
+.movie-view-button {
+  color: #ad2e0e;
+  background-color: #fddada;
+  font-size: 1.5em;
+}
+
+.login-card {
+  background-color: #fddada;
+}
+
+.login-button {
+  background-color: #af2e07;
   margin-top: 20px;
 }
 
 
+
+.register-title {
+  color: #000;
+}
+
+.register-card {
+  background-color: #fddada;
+}
+
+.register-card-label {
+  color: #000;
+}
+
+.register-button {
+  background-color: #af2e07;
+  margin-top: 20px;
+}
 
 /*# sourceMappingURL=index.ce1d6491.css.map */

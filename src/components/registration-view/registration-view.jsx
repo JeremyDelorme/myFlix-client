@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button, Card, CardGroup, Container, Col, Row } from 'react-bootstrap';
+import "./registration-view.scss"
 
 export function RegistrationView(props) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
+    const [birthday, setBirthday] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,16 +19,16 @@ export function RegistrationView(props) {
 
 
     return (
-        <Container>
+        <Container className="register-container">
             <Row>
                 <Col>
                     <CardGroup>
-                        <Card>
+                        <Card className="register-card">
                             <Card.Body>
-                                <Card.Title>Please register</Card.Title>
+                                <Card.Title className="register-title">Please register</Card.Title>
                                 <Form>
                                     <Form.Group>
-                                        <Form.Label>Username</Form.Label>
+                                        <Form.Label className="register-card-label">Username</Form.Label>
                                         <Form.Control
                                             type="text"
                                             value={username}
@@ -37,7 +39,7 @@ export function RegistrationView(props) {
                                     </Form.Group>
 
                                     <Form.Group>
-                                        <Form.Label>Password</Form.Label>
+                                        <Form.Label className="register-card-label">Password</Form.Label>
                                         <Form.Control
                                             type="password"
                                             value={password}
@@ -49,7 +51,7 @@ export function RegistrationView(props) {
                                     </Form.Group>
 
                                     <Form.Group>
-                                        <Form.Label>Email</Form.Label>
+                                        <Form.Label className="register-card-label">Email</Form.Label>
                                         <Form.Control
                                             type="email"
                                             value={email}
@@ -59,7 +61,17 @@ export function RegistrationView(props) {
                                         />
                                     </Form.Group>
 
-                                    <Button variant="primary"
+                                    <Form.Group>
+                                        <Form.Label>Birthday:</Form.Label>
+                                        <Form.Control
+                                            type="date"
+                                            value={birthday}
+                                            onChange={e => setBirthday(e.target.value)}
+                                            required
+                                            placeholder="Enter your birthday" />
+                                    </Form.Group>
+
+                                    <Button className="register-button" variant="primary"
                                         type="submit"
                                         onClick={handleSubmit}>
                                         Register
