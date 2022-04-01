@@ -10,10 +10,10 @@ export class MovieCard extends React.Component {
         const { movie, onMovieClick } = this.props;
 
         return (
-            <Container>
+            <Container className="movie-card-container">
                 <CardGroup>
-                    <Card className="movie-card">
-                        <Card.Body>
+                    <Card>
+                        <Card.Body className="movie-card-body">
                             <Card.Title className="movie-title">{movie.Title}</Card.Title>
                             <a><Card.Img className='movie-image' variant="top" src={movie.ImagePath} /></a>
                         </Card.Body>

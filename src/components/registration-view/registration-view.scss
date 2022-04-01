@@ -5,16 +5,14 @@
 }
 
 .register-card{
+    display: flex;
     background-color: #fddada;
+    justify-content: center;
 }
 
 .register-card-label{
     color: black;
 }
-
-// .register-last-form{
-//     padding-bottom: 20px;
-// }
 
 .register-button{
     background-color: rgb(175, 46, 7);

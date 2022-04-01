@@ -1008,6 +1008,7 @@ var _indexScss = require("./index.scss");
 class MyFlixApplication extends _reactDefault.default.Component {
     render() {
         return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_containerDefault.default, {
+            fluid: true,
             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_mainView.MainView, {}, void 0, false, {
                 fileName: "src/index.jsx",
                 lineNumber: 13,
@@ -22717,43 +22718,66 @@ class MainView extends _reactDefault.default.Component {
             lineNumber: 62,
             columnNumber: 42
         }, this);
-        return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-            className: "main-view",
-            children: selectedMovie ? /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Row, {
-                className: "justify-content-md-center",
-                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Col, {
-                    md: 8,
-                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_movieView.MovieView, {
-                        movie: selectedMovie,
-                        onBackClick: (newSelectedMovie)=>{
-                            this.setSelectedMovie(newSelectedMovie);
-                        }
-                    }, void 0, false, {
+        return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Container, {
+            fluid: true,
+            children: [
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Row, {
+                    className: "navbar-row",
+                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_navbarView.NavbarView, {}, void 0, false, {
                         fileName: "src/components/main-view/main-view.jsx",
-                        lineNumber: 70,
-                        columnNumber: 33
+                        lineNumber: 67,
+                        columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 69,
-                    columnNumber: 29
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 68,
-                columnNumber: 25
-            }, this) : movies.map((movie)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_movieCard.MovieCard, {
-                    movie: movie,
-                    onMovieClick: (newSelectedMovie)=>{
-                        this.setSelectedMovie(newSelectedMovie);
-                    }
-                }, movie._id, false, {
+                    lineNumber: 66,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Row, {
+                    className: "main-view",
+                    children: selectedMovie ? /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Col, {
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_movieView.MovieView, {
+                            movie: selectedMovie,
+                            onBackClick: (newSelectedMovie)=>{
+                                this.setSelectedMovie(newSelectedMovie);
+                            }
+                        }, void 0, false, {
+                            fileName: "src/components/main-view/main-view.jsx",
+                            lineNumber: 73,
+                            columnNumber: 33
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/main-view/main-view.jsx",
+                        lineNumber: 72,
+                        columnNumber: 29
+                    }, this) : movies.map((movie)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Col, {
+                            lg: 3,
+                            md: 4,
+                            sm: 6,
+                            xs: 12,
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_movieCard.MovieCard, {
+                                movie: movie,
+                                onMovieClick: (newSelectedMovie)=>{
+                                    this.setSelectedMovie(newSelectedMovie);
+                                }
+                            }, movie._id, false, {
+                                fileName: "src/components/main-view/main-view.jsx",
+                                lineNumber: 78,
+                                columnNumber: 33
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/components/main-view/main-view.jsx",
+                            lineNumber: 77,
+                            columnNumber: 29
+                        }, this)
+                    )
+                }, void 0, false, {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 75,
-                    columnNumber: 25
+                    lineNumber: 69,
+                    columnNumber: 17
                 }, this)
-            )
-        }, void 0, false, {
+            ]
+        }, void 0, true, {
             fileName: "src/components/main-view/main-view.jsx",
             lineNumber: 65,
             columnNumber: 13
@@ -34544,11 +34568,12 @@ class MovieCard extends _reactDefault.default.Component {
     render() {
         const { movie , onMovieClick  } = this.props;
         return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Container, {
+            className: "movie-card-container",
             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.CardGroup, {
                 children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Card, {
-                    className: "movie-card",
                     children: [
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Card.Body, {
+                            className: "movie-card-body",
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Card.Title, {
                                     className: "movie-title",
@@ -35012,193 +35037,70 @@ $parcel$ReactRefreshHelpers$8284.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "NavbarView", ()=>NavbarView
+);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-const Navbar = ()=>{
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("nav", {
-        className: "navbar navbar-expand-lg navbar-light bg-light",
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-                className: "navbar-brand",
-                href: "#",
-                children: "Navbar"
-            }, void 0, false, {
-                fileName: "src/components/navbar-view/navbar-view.jsx",
-                lineNumber: 6,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                className: "navbar-toggler",
-                type: "button",
-                "data-toggle": "collapse",
-                "data-target": "#navbarNavDropdown",
-                "aria-controls": "navbarNavDropdown",
-                "aria-expanded": "false",
-                "aria-label": "Toggle navigation",
-                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                    className: "navbar-toggler-icon"
+var _navbarViewScss = require("./navbar-view.scss");
+var _reactBootstrap = require("react-bootstrap");
+function NavbarView() {
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Container, {
+        fluid: true,
+        className: "navbar-container",
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Navbar, {
+            children: [
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Navbar.Brand, {
+                    children: "myFlix"
                 }, void 0, false, {
                     fileName: "src/components/navbar-view/navbar-view.jsx",
-                    lineNumber: 18,
+                    lineNumber: 12,
                     columnNumber: 17
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/navbar-view/navbar-view.jsx",
-                lineNumber: 9,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                className: "collapse navbar-collapse",
-                id: "navbarNavDropdown",
-                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("ul", {
-                    className: "navbar-nav",
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Container, {
+                    className: "nav-links",
                     children: [
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                            className: "nav-item active",
-                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-                                className: "nav-link",
-                                href: "#",
-                                children: [
-                                    "Home ",
-                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                                        className: "sr-only",
-                                        children: "(current)"
-                                    }, void 0, false, {
-                                        fileName: "src/components/navbar-view/navbar-view.jsx",
-                                        lineNumber: 25,
-                                        columnNumber: 34
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/navbar-view/navbar-view.jsx",
-                                lineNumber: 24,
-                                columnNumber: 25
-                            }, undefined)
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Nav.Link, {
+                            children: "Profile"
                         }, void 0, false, {
                             fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 23,
+                            lineNumber: 14,
                             columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                            className: "nav-item",
-                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-                                className: "nav-link",
-                                href: "#",
-                                children: "Features"
-                            }, void 0, false, {
-                                fileName: "src/components/navbar-view/navbar-view.jsx",
-                                lineNumber: 29,
-                                columnNumber: 25
-                            }, undefined)
+                        }, this),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Nav.Link, {
+                            children: "Watchlist"
                         }, void 0, false, {
                             fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 28,
+                            lineNumber: 15,
                             columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                            className: "nav-item",
-                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-                                className: "nav-link",
-                                href: "#",
-                                children: "Pricing"
-                            }, void 0, false, {
-                                fileName: "src/components/navbar-view/navbar-view.jsx",
-                                lineNumber: 34,
-                                columnNumber: 25
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 33,
-                            columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                            className: "nav-item dropdown",
-                            children: [
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-                                    className: "nav-link dropdown-toggle",
-                                    href: "#",
-                                    id: "navbarDropdownMenuLink",
-                                    "data-toggle": "dropdown",
-                                    "aria-haspopup": "true",
-                                    "aria-expanded": "false",
-                                    children: "Dropdown link"
-                                }, void 0, false, {
-                                    fileName: "src/components/navbar-view/navbar-view.jsx",
-                                    lineNumber: 39,
-                                    columnNumber: 25
-                                }, undefined),
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                    className: "dropdown-menu",
-                                    "aria-labelledby": "navbarDropdownMenuLink",
-                                    children: [
-                                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-                                            className: "dropdown-item",
-                                            href: "#",
-                                            children: "Action"
-                                        }, void 0, false, {
-                                            fileName: "src/components/navbar-view/navbar-view.jsx",
-                                            lineNumber: 53,
-                                            columnNumber: 29
-                                        }, undefined),
-                                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-                                            className: "dropdown-item",
-                                            href: "#",
-                                            children: "Another action"
-                                        }, void 0, false, {
-                                            fileName: "src/components/navbar-view/navbar-view.jsx",
-                                            lineNumber: 56,
-                                            columnNumber: 29
-                                        }, undefined),
-                                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-                                            className: "dropdown-item",
-                                            href: "#",
-                                            children: "Something else here"
-                                        }, void 0, false, {
-                                            fileName: "src/components/navbar-view/navbar-view.jsx",
-                                            lineNumber: 59,
-                                            columnNumber: 29
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/components/navbar-view/navbar-view.jsx",
-                                    lineNumber: 49,
-                                    columnNumber: 25
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 38,
-                            columnNumber: 21
-                        }, undefined)
+                        }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/navbar-view/navbar-view.jsx",
-                    lineNumber: 22,
+                    lineNumber: 13,
                     columnNumber: 17
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/navbar-view/navbar-view.jsx",
-                lineNumber: 21,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/navbar-view/navbar-view.jsx",
+            lineNumber: 11,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
         fileName: "src/components/navbar-view/navbar-view.jsx",
-        lineNumber: 5,
+        lineNumber: 10,
         columnNumber: 9
-    }, undefined);
-};
-_c = Navbar;
-exports.default = Navbar;
+    }, this);
+}
+_c = NavbarView;
 var _c;
-$RefreshReg$(_c, "Navbar");
+$RefreshReg$(_c, "NavbarView");
 
   $parcel$ReactRefreshHelpers$8284.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA"}],"lJZlQ":[function() {},{}]},["93xK8","cwVHf","d8Dch"], "d8Dch", "parcelRequireaec4")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA","./navbar-view.scss":"cYTZj","react-bootstrap":"3AD9A"}],"cYTZj":[function() {},{}],"lJZlQ":[function() {},{}]},["93xK8","cwVHf","d8Dch"], "d8Dch", "parcelRequireaec4")
 
 //# sourceMappingURL=index.b4b6dfad.js.map

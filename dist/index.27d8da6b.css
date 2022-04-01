@@ -7,74 +7,72 @@
   margin-top: 20px;
 }
 
-.movie-card {
-  width: 500px;
-  height: 700px;
-  text-align: center;
-  cursor: pointer;
-  background: #fddada;
-  border-radius: 10px;
-  margin-top: 5px;
-  padding: 10px 10px 300px;
-  font-weight: bold;
-  box-shadow: 5px 20px 30px #000;
+.movie-card-container {
+  padding-bottom: 20px;
+}
+
+.movie-card-body {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 20px;
+  display: flex;
 }
 
 .movie-title {
-  color: #0c0c0c;
-  justify-content: center;
-  padding-bottom: 30px;
-  font-size: 2.5em;
-  font-weight: bold;
-}
-
-.movie-image {
-  height: 500px;
-  width: 500px;
+  width: 100%;
+  object-fit: cover;
   text-align: center;
 }
 
+.movie-image {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
 .card-button {
-  color: #ad2e0e;
+  color: #e03a10;
+  background-color: #fddada;
+  margin: auto auto 20px;
   font-size: 1.5em;
 }
 
 .movie-view {
-  width: 800px;
-  height: 700px;
-  text-align: center;
-  cursor: pointer;
-  background: #fddada;
-  border-radius: 10px;
-  margin-top: 5px;
-  margin-bottom: 50px;
-  padding: 10px 10px 300px;
-  font-weight: bold;
-  box-shadow: 5px 20px 30px #000;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 20px;
+  display: flex;
 }
 
 .movie-view-title {
   color: #0c0c0c;
-  justify-content: center;
+  text-align: center;
   padding-bottom: 30px;
   font-size: 2.5em;
   font-weight: bold;
 }
 
 .movie-view-image {
-  height: 300px;
-  width: 300px;
-  text-align: center;
-  padding-bottom: 20px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .movie-view-button {
   color: #ad2e0e;
   background-color: #fddada;
+  margin-top: 20px;
   font-size: 1.5em;
 }
 
-
+.navbar-row {
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+}
 
 .register-title {
   color: #000;
@@ -82,6 +80,8 @@
 
 .register-card {
   background-color: #fddada;
+  justify-content: center;
+  display: flex;
 }
 
 .register-card-label {
@@ -91,6 +91,16 @@
 .register-button {
   background-color: #af2e07;
   margin-top: 20px;
+}
+
+.navbar-container {
+  height: 4em;
+  width: 100%;
+  background-color: #fddada;
+  flex-grow: 1;
+  margin: -50px -50px 20px -20px;
+  line-height: 4em;
+  display: flex;
 }
 
 html, body, .app-container {

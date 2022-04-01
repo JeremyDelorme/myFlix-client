@@ -1,13 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-import { Navbar, Nav, Container, Col, Row } from 'react-bootstrap';
+import { Navbar, Container, Col, Row } from 'react-bootstrap';
 import "./main-view.scss"
 
 import { RegistrationView } from '../registration-view/registration-view';
 import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
-import { NavbarView } from "../navbar-view/navbar-view";
+import { NavbarView } from '../navbar-view/navbar-view';
 
 export class MainView extends React.Component {
 
@@ -62,20 +62,26 @@ export class MainView extends React.Component {
         if (movies.length === 0) return (<div className="main-view" />);
 
         return (
-            <div className="main-view">
-                {selectedMovie
-                    ? (
-                        <Row className="justify-content-md-center">
-                            <Col md={8}>
+            <Container fluid>
+                <Row className="navbar-row">
+                    <NavbarView />
+                </Row>
+                <Row className="main-view">
+                    {selectedMovie
+                        ? (
+                            <Col>
                                 <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
                             </Col>
-                        </Row>
-                    )
-                    : movies.map(movie => (
-                        <MovieCard key={movie._id} movie={movie} onMovieClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
-                    ))
-                }
-            </div>
+                        )
+                        : movies.map(movie => (
+                            <Col lg={3} md={4} sm={6} xs={12} >
+                                <MovieCard key={movie._id} movie={movie} onMovieClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
+                            </Col>
+                        ))
+                    }
+                </Row>
+            </Container>
+
         );
     }
 

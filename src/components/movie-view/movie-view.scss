@@ -1,18 +1,12 @@
 
    
 .movie-view{
-	width: 800px;
-    height: 700px;
-    padding: 10px;
-    padding-bottom: 300px;
-    margin-top: 5px;
-    margin-bottom: 50px;
-    text-align: center;
-    font-weight: bold;
-    background: #fddada;
-    border-radius: 10px;
-    box-shadow: 5px 20px 30px #000;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
 .movie-view-title{
@@ -20,18 +14,17 @@
      color: rgb(12, 12, 12);
      font-size: 2.5em;
      padding-bottom: 30px;
-     justify-content: center;
+     text-align: center;
 }
 
 .movie-view-image{
-    height: 300px;
-    width: 300px;
-	padding-bottom: 20px;
-    text-align: center;
+    width: 100%;
+    object-fit: cover;
 }
 
 .movie-view-button{
     background-color: #fddada;
     color: rgb(173, 46, 14);
     font-size: 1.5em;
+    margin-top: 20px;
 }
