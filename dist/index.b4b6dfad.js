@@ -35102,5 +35102,6 @@ $RefreshReg$(_c, "NavbarView");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA","./navbar-view.scss":"cYTZj","react-bootstrap":"3AD9A"}],"cYTZj":[function() {},{}],"lJZlQ":[function() {},{}]},["93xK8","cwVHf","d8Dch"], "d8Dch", "parcelRequireaec4")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./navbar-view.scss":"cYTZj","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"jlt2O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"2LTuA"}],"cYTZj":[function() {},{}],"lJZlQ":[function() {},{}]},["93xK8","cwVHf","d8Dch"], "d8Dch", "parcelRequireaec4")
 
 //# sourceMappingURL=index.b4b6dfad.js.map
