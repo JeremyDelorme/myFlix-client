@@ -1,7 +1,9 @@
 
 import React from 'react';
+import axios from 'axios';
 import PropTypes from 'prop-types';
-import "./movie-card.scss"
+import './movie-card.scss';
+import { Link } from 'react-router-dom';
 
 import { CardGroup, Container, Button, Card } from "react-bootstrap"
 
@@ -27,7 +29,19 @@ export class MovieCard extends React.Component {
 
 MovieCard.propTypes = {
     movie: PropTypes.shape({
-        Title: PropTypes.string.isRequired
+        Title: PropTypes.string.isRequired,
+        Description: PropTypes.string.isRequired,
+        ImagePath: PropTypes.string.isRequired,
+        Genre: PropTypes.shape({
+            Name: PropTypes.string.isRequired,
+            Description: PropTypes.string.isRequired,
+        }).isRequired,
+        Director: PropTypes.shape({
+            Bio: PropTypes.string.isRequired,
+            Birth: PropTypes.string.isRequired,
+            Death: PropTypes.string.isRequired,
+            Name: PropTypes.string.isRequired,
+        }).isRequired,
     }).isRequired,
     onMovieClick: PropTypes.func.isRequired
 };

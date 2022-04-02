@@ -68,6 +68,12 @@
   font-size: 1.5em;
 }
 
+.navbar-row {
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
 .register-title {
   color: #000;
 }
@@ -87,12 +93,6 @@
   margin-top: 20px;
 }
 
-.navbar-row {
-  text-align: center;
-  width: 100%;
-  padding-top: 20px;
-}
-
 .navbar-container {
   height: 4em;
   width: 100%;
@@ -101,6 +101,27 @@
   margin: -50px -50px 20px -20px;
   line-height: 4em;
   display: flex;
+}
+
+* {
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #353535;
+  font-family: Montserrat, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #353535;
+  font-family: Montserrat, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #353535;
+  font-family: Montserrat, sans-serif;
 }
 
 html, body, .app-container {
