@@ -135,7 +135,11 @@
   background-color: #e5383b;
   font-size: 20px;
   font-weight: 600;
+=======
+.navbar-row {
+  text-align: center;
   width: 100%;
+  padding-top: 20px;
 }
 
 .navbar-container {
@@ -146,6 +150,7 @@
   margin: -50px -50px 20px -20px;
   line-height: 4em;
   display: flex;
+>>>>>>> Stashed changes
 }
 
 html, body, .app-container {
