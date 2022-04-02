@@ -68,12 +68,6 @@
   font-size: 1.5em;
 }
 
-.navbar-row {
-  text-align: center;
-  width: 100%;
-  padding-top: 20px;
-}
-
 .register-title {
   color: #000;
 }
@@ -91,6 +85,12 @@
 .register-button {
   background-color: #af2e07;
   margin-top: 20px;
+}
+
+.navbar-row {
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
 }
 
 .navbar-container {
