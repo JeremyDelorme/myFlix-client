@@ -28,12 +28,18 @@ export class MovieView extends React.Component {
                                     {movie.Description}</Card.Text>
                                 <Card.Text id="movie-director" className="movie-director">
                                     Director: {movie.Director.Name}</Card.Text>
+                                <Link to={`/directors/${movie.Director.Name}`}>
+                                    <Button variant="link">Director</Button>
+                                </Link>
                                 <Card.Text id="movie-genre" className="movie-gerne">
                                     Genre: {movie.Genre.Name}</Card.Text>
+                                <Link to={`/genres/${movie.Genre.Name}`}>
+                                    <Button variant="link">Genre</Button>
+                                </Link>
                             </Card.Body>
                         </Card>
-                        <Button className="movie-view-button" onClick={() => { onBackClick(null); }}>Back</Button>
-                        <Button className="movie-view-button" onClick={() => { }}>Add to favorites</Button>
+
+                        <Button variant="outline-light" onClick={() => onBackClick(null)}>Back</Button>
                     </Col>
                 </Row>
             </Container>

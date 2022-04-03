@@ -8,7 +8,9 @@
 }
 
 .movie-card-container {
+  width: 100%;
   padding-bottom: 20px;
+  display: flex;
 }
 
 .movie-card-body {
@@ -24,12 +26,14 @@
   width: 100%;
   object-fit: cover;
   text-align: center;
+  display: flex;
 }
 
 .movie-image {
   width: 100%;
   height: 15vw;
   object-fit: cover;
+  display: flex;
 }
 
 .card-button {
@@ -37,6 +41,16 @@
   background-color: #fddada;
   margin: auto auto 20px;
   font-size: 1.5em;
+  display: flex;
+}
+
+.card-group {
+  justify-content: center;
+  display: flex;
+}
+
+.card {
+  justify-content: center;
 }
 
 .movie-view {
@@ -54,6 +68,7 @@
   padding-bottom: 30px;
   font-size: 2.5em;
   font-weight: bold;
+  display: flex;
 }
 
 .movie-view-image {
@@ -101,27 +116,6 @@
   margin: -50px -50px 20px -20px;
   line-height: 4em;
   display: flex;
-}
-
-* {
-  box-sizing: border-box;
-  color: #fff;
-  background-color: #353535;
-  font-family: Montserrat, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-  color: #fff;
-  background-color: #353535;
-  font-family: Montserrat, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-  color: #fff;
-  background-color: #353535;
-  font-family: Montserrat, sans-serif;
 }
 
 html, body, .app-container {

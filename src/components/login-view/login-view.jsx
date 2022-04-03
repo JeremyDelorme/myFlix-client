@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import { PropTypes } from 'prop-types';
 import { Button, Form, Container, Col, Row, CardGroup, Card } from 'react-bootstrap';
 import './login-view.scss';
-
 import axios from 'axios';
 
 export function LoginView(props) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
         /* Send a request to the server for authentication */
-        axios.post('YOUR_API_URL/login', {
+        axios.post('https://movie-api-jeremydelorme.herokuapp.com/login', {
             Username: username,
             Password: password
         })
