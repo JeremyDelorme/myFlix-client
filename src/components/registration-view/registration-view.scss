@@ -2,19 +2,32 @@
 
 .register-title{
     color:black;
+    text-align: center;
 }
 
 .register-card{
     display: flex;
-    background-color: #fddada;
+    background-color: #f5b6b6;
     justify-content: center;
 }
 
-.register-card-label{
-    color: black;
-}
-
 .register-button{
-    background-color: rgb(175, 46, 7);
+    background-color: rgb(243, 81, 81);
     margin-top: 20px;
 }
+
+.submit-button{
+    margin-top: 20px;
+    background-color: rgb(243, 81, 81);
+}
+
+.button-col1{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button-col2{
+    display: flex;
+    justify-content: flex-end;
+}
+    

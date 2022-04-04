@@ -9,15 +9,7 @@
 
 .movie-card-container {
   width: 100%;
-  padding-bottom: 20px;
-  display: flex;
-}
-
-.movie-card-body {
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  margin: auto;
+  padding-top: 30px;
   padding-bottom: 20px;
   display: flex;
 }
@@ -26,7 +18,6 @@
   width: 100%;
   object-fit: cover;
   text-align: center;
-  display: flex;
 }
 
 .movie-image {
@@ -55,25 +46,15 @@
 
 .movie-view {
   flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
   margin: auto;
   padding-bottom: 20px;
   display: flex;
 }
 
-.movie-view-title {
-  color: #0c0c0c;
-  text-align: center;
-  padding-bottom: 30px;
-  font-size: 2.5em;
-  font-weight: bold;
-  display: flex;
-}
-
 .movie-view-image {
-  width: 100%;
-  object-fit: cover;
+  justify-content: center;
+  display: flex;
 }
 
 .movie-view-button {
@@ -83,43 +64,81 @@
   font-size: 1.5em;
 }
 
-.navbar-row {
+.movie-view-container {
   text-align: center;
-  width: 100%;
-  padding-top: 20px;
-}
-
-.register-title {
-  color: #000;
-}
-
-.register-card {
-  background-color: #fddada;
   justify-content: center;
   display: flex;
 }
 
-.register-card-label {
-  color: #000;
-}
-
-.register-button {
-  background-color: #af2e07;
-  margin-top: 20px;
-}
-
-.navbar-container {
-  height: 4em;
-  width: 100%;
-  background-color: #fddada;
-  flex-grow: 1;
-  margin: -50px -50px 20px -20px;
-  line-height: 4em;
+.card-img-top {
+  justify-content: center;
   display: flex;
 }
 
-html, body, .app-container {
-  background-color: #802703;
+.main-view {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.main-director-col {
+  justify-content: space-around;
+  display: flex;
+}
+
+.main-view-row {
+  width: auto;
+}
+
+.register-title {
+  color: #000;
+  text-align: center;
+}
+
+.register-card {
+  background-color: #f5b6b6;
+  justify-content: center;
+  display: flex;
+}
+
+.register-button, .submit-button {
+  background-color: #f35151;
+  margin-top: 20px;
+}
+
+.button-col1 {
+  justify-content: flex-start;
+  display: flex;
+}
+
+.button-col2 {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #f5b6b6;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.navbar-container {
+  justify-content: left;
+  display: flex;
+}
+
+
+
+
+
+.favorite-movie-card {
+  justify-content: center;
+  display: flex;
+}
+
+.app-container, html, body {
+  background-color: #fddada;
 }
 
 /*# sourceMappingURL=index.27d8da6b.css.map */

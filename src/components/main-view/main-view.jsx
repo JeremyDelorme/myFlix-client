@@ -11,6 +11,9 @@ import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { NavbarView } from '../navbar-view/navbar-view';
+import { ProfileView } from '../profile-view/profile-view';
+import { GenreView } from '../genre-view/genre-view';
+import { DirectorView } from '../director-view/director-view';
 
 export class MainView extends React.Component {
 
@@ -48,12 +51,6 @@ export class MainView extends React.Component {
         }
     }
 
-    // setSelectedMovie(movie) {
-    //     this.setState({
-    //         selectedMovie: movie
-    //     });
-    // }
-
     onLoggedIn(authData) {
         console.log(authData);
         this.setState({
@@ -73,12 +70,6 @@ export class MainView extends React.Component {
         });
     }
 
-    // onRegistration(register) {
-    //     this.setState({
-    //         register
-    //     });
-    // }
-
     render() {
         const { movies, user } = this.state;
 
@@ -86,7 +77,7 @@ export class MainView extends React.Component {
             <Router>
                 <NavbarView user={user} />
                 <Container fluid>
-                    <Row className="main-view justify-content-md-center">
+                    <Row className="main-view-row">
                         <Route exact path="/" render={() => {
                             if (!user) return <Col>
                                 <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
@@ -99,15 +90,17 @@ export class MainView extends React.Component {
                             ))
                         }} />
                         <Route path="/register" render={() => {
-                            return <Col>
-                                <RegistrationView />
-                            </Col>
+                            return (
+                                <Col>
+                                    <RegistrationView />
+                                </Col>
+                            )
                         }} />
 
                         <Route path="/movies/:movieId" render={({ match, history }) => {
                             if (movies.length === 0) return <div className="main-view" />;
                             return (
-                                <Col xs={12} md={10}>
+                                <Col lg={3} md={4} sm={6} xs={12}>
                                     <MovieView movie={movies.find(m => m._id === match.params.movieId)} onBackClick={() => history.goBack()} />
                                 </Col>
                             )
@@ -116,7 +109,7 @@ export class MainView extends React.Component {
                         <Route path={"/users/${user}"} render={({ history }) => {
                             if (!user) return <Redirect to="/" />
                             return (
-                                <Col xs={12} md={10}>
+                                <Col lg={3} md={4} sm={6} xs={12}>
                                     <ProfileView user={user} movies={movies} onBackClick={() => history.goBack()} />
                                 </Col>
                             )
@@ -127,7 +120,7 @@ export class MainView extends React.Component {
                             // If movie list is empty (while movies load from API), display empty page
                             if (movies.length === 0) return <div className="main-view" />;
                             return (
-                                <Col xs={12} md={10}>
+                                <Col className="main-director-col" lg={3} md={4} sm={6} xs={12}>
                                     <DirectorView movies={movies} director={movies.find(m => m.Director.Name === match.params.name).Director} onBackClick={() => history.goBack()} />
                                 </Col>
                             )
@@ -138,7 +131,7 @@ export class MainView extends React.Component {
                             // If movie list is empty (while movies load from API), display empty page
                             if (movies.length === 0) return <div className="main-view" />;
                             return (
-                                <Col xs={12} md={10}>
+                                <Col lg={3} md={4} sm={6} xs={12}>
                                     <GenreView movies={movies} genre={movies.find(m => m.Genre.Name === match.params.name).Genre} onBackClick={() => history.goBack()} />
                                 </Col>
                             )

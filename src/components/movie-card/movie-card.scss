@@ -2,19 +2,19 @@
     display: flex;
     padding-bottom: 20px;
     width: 100%;
+    padding-top: 30px;
 }  
 
-.movie-card-body{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: auto;
-    padding-bottom: 20px;
+.card-body{
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-around;
+    // flex-wrap: wrap;
+    // padding-bottom: 20px;
+    // width: 17rem;
 }
 
 .movie-title{
-    display: flex;
     width: 100%;
     object-fit: cover;
     text-align: center;
@@ -38,6 +38,7 @@
 .card-group{
     display:flex;
     justify-content: center;
+    
 }
 .card{
     justify-content:center;

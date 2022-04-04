@@ -228,8 +228,8 @@ export class ProfileView extends React.Component {
                                         />
                                     </Form.Group>
                                     <div className="mt-3">
-                                        <Button variant="success" type="submit" onClick={this.editUser}>Update User</Button>
-                                        <Button className="ml-3" variant="secondary" onClick={() => this.onDeleteUser()}>Delete User</Button>
+                                        <Button type="submit" onClick={this.editUser}>Update User</Button>
+                                        <Button onClick={() => this.onDeleteUser()}>Delete User</Button>
                                     </div>
                                 </Form>
                             </Card.Body>
@@ -296,7 +296,6 @@ ProfileView.propTypes = {
         Director: PropTypes.shape({
             Bio: PropTypes.string.isRequired,
             Birth: PropTypes.string.isRequired,
-            Death: PropTypes.string.isRequired,
             Name: PropTypes.string.isRequired,
         }).isRequired,
     })).isRequired,

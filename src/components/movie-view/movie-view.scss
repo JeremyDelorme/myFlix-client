@@ -3,24 +3,26 @@
 .movie-view{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    // justify-content: space-around;
     flex-wrap: wrap;
     margin: auto;
     padding-bottom: 20px;
 }
 
 .movie-view-title{
-    display: flex;
-     font-weight: bold;
-     color: rgb(12, 12, 12);
-     font-size: 2.5em;
-     padding-bottom: 30px;
-     text-align: center;
+    // display: flex;
+    //  font-weight: bold;
+    //  color: rgb(12, 12, 12);
+    //  font-size: 2.5em;
+    //  padding-bottom: 30px;
+    //  justify-content: center;
 }
 
 .movie-view-image{
-    width: 100%;
-    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    // object-fit: cover;
+    ;
 }
 
 .movie-view-button{
@@ -28,4 +30,15 @@
     color: rgb(173, 46, 14);
     font-size: 1.5em;
     margin-top: 20px;
+}
+
+.movie-view-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-img-top{
+    display: flex;
+    justify-content: center;
 }

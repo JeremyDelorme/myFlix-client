@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { Card, Col, Container, Row, Button } from "react-bootstrap"
 import "./movie-view.scss"
+import axios from 'axios';
+
+import { Link } from 'react-router-dom'
 
 export class MovieView extends React.Component {
     keypressCallback(event) {
@@ -17,7 +20,7 @@ export class MovieView extends React.Component {
         const { movie, onBackClick } = this.props;
 
         return (
-            <Container>
+            <Container className="movie-view-container">
                 <Row>
                     <Col>
                         <Card className="movie-view">
@@ -31,15 +34,16 @@ export class MovieView extends React.Component {
                                 <Link to={`/directors/${movie.Director.Name}`}>
                                     <Button variant="link">Director</Button>
                                 </Link>
-                                <Card.Text id="movie-genre" className="movie-gerne">
+                                <Card.Text id="movie-genre" className="movie-genre">
                                     Genre: {movie.Genre.Name}</Card.Text>
                                 <Link to={`/genres/${movie.Genre.Name}`}>
                                     <Button variant="link">Genre</Button>
                                 </Link>
                             </Card.Body>
                         </Card>
-
-                        <Button variant="outline-light" onClick={() => onBackClick(null)}>Back</Button>
+                        <Link to={"/"}>
+                            <Button variant="outline-light">Back to full list</Button>
+                        </Link>
                     </Col>
                 </Row>
             </Container>

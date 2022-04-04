@@ -1,12 +1,17 @@
+.navbar{
+    background-color: #f5b6b6;
+    // position: relative;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    width: 100%;;
+  }
+
+  .navbar-main{
+
+  }
+
 .navbar-container{
     display: flex;
-    height: 4em;
-    line-height: 4em;
-    width: 100%;
-    flex-grow: 1;
-    background-color: #fddada;
-    margin-top: -50px;
-    margin-left: -20px;
-    margin-right: -50px;
-    margin-bottom: 20px;
+    justify-content:left;
 }

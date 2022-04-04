@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Form, Button, Card, CardGroup, Container, Col, Row } from 'react-bootstrap';
+import { Form, Button, Card, CardGroup, Container, Col, Row, Link } from 'react-bootstrap';
 import "./registration-view.scss"
 import axios from 'axios';
+import { render } from 'react-dom';
 
 export function RegistrationView(props) {
     const [username, setUsername] = useState('');
@@ -30,10 +31,9 @@ export function RegistrationView(props) {
     };
 
 
-
-
     return (
-        <Container className="register-container">
+
+        <Container fluid className="register-container">
             <Row>
                 <Col>
                     <CardGroup>
@@ -84,13 +84,22 @@ export function RegistrationView(props) {
                                             required
                                             placeholder="Enter your birthday" />
                                     </Form.Group>
-
-                                    <Button className="register-button" variant="primary"
-                                        type="submit"
-                                        onClick={handleSubmit}>
-                                        Register
-                                    </Button>
                                 </Form>
+                                <Row className="buttons-row">
+                                    <Col className="button-col1">
+                                        <Button className="register-button" variant="primary"
+                                            type="submit"
+                                            onClick={handleSubmit}>
+                                            Register
+                                        </Button>
+                                    </Col>
+                                    <Col className="button-col2">
+                                        <Button className="submit-button" type="submit" onClick={handleSubmit}>Submit</Button>
+                                    </Col>
+                                </Row>
+
+
+
                             </Card.Body>
                         </Card>
                     </CardGroup>
@@ -102,6 +111,11 @@ export function RegistrationView(props) {
 
 }
 
-// RegistrationView.propTypes = {
-//     onRegistration: PropTypes.func.isRequired
-// };
+RegistrationView.propTypes = {
+    register: PropTypes.shape({
+        Username: PropTypes.string.isRequired,
+        Password: PropTypes.string.isRequired,
+        Email: PropTypes.string.isRequired,
+    }),
+    onRegistration: PropTypes.func,
+};
