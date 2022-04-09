@@ -21,32 +21,47 @@ export class MovieView extends React.Component {
 
         return (
             <Container className="movie-view-container">
-                <Row>
-                    <Col>
-                        <Card className="movie-view">
+                <Row className="movie-view-title-row">
+                    <Col className="movie-view-title-col">
+                        <Card className="movie-view-title-card">
                             <Card.Body>
                                 <Card.Title className="movie-view-title">{movie.Title}</Card.Title>
-                                <Card.Img className="movie-view-image" variant="top" src={movie.ImagePath} />
-                                <Card.Text id="movie-description" className="movie-description">
-                                    {movie.Description}</Card.Text>
-                                <Card.Text id="movie-director" className="movie-director">
-                                    Director: {movie.Director.Name}</Card.Text>
-                                <Link to={`/directors/${movie.Director.Name}`}>
-                                    <Button variant="link">Director</Button>
-                                </Link>
-                                <Card.Text id="movie-genre" className="movie-genre">
-                                    Genre: {movie.Genre.Name}</Card.Text>
-                                <Link to={`/genres/${movie.Genre.Name}`}>
-                                    <Button variant="link">Genre</Button>
-                                </Link>
                             </Card.Body>
                         </Card>
-                        <Link to={"/"}>
-                            <Button variant="outline-light">Back to full list</Button>
-                        </Link>
                     </Col>
                 </Row>
-            </Container>
+                <Row className="movie-view-row">
+                    <Col className="movie-view-col">
+                        <Card className="movie-view-card">
+                            <Card.Body className="movie-view-card-body">
+                                <Card.Img className="movie-view-image" src={movie.ImagePath} />
+                                <Card.Text className="movie-description">
+                                    {movie.Description}</Card.Text>
+                                <Card.Text>
+                                    Director: {movie.Director.Name}
+                                </Card.Text>
+                                <br />
+                                <div>
+                                    <Link to={`/directors/${movie.Director.Name}`}>
+                                        <Button className="director-button" variant="link">Director</Button>
+                                    </Link>
+                                </div>
+                                <Card.Text>
+                                    Genre: {movie.Genre.Name}
+                                </Card.Text>
+                                <div>
+                                    <Link to={`/genres/${movie.Genre.Name}`}>
+                                        <Button className="genre-button" variant="link">Genre</Button>
+                                    </Link>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                <Link to={"/"}>
+                    <Button className="movie-view-button" variant="outline-light">Back to full list</Button>
+                </Link>
+            </Container >
         );
     }
 }

@@ -1,44 +1,45 @@
-
-   
-.movie-view{
+.movie-view-card{
     display: flex;
-    align-items: center;
-    // justify-content: space-around;
-    flex-wrap: wrap;
-    margin: auto;
+    margin-top: 20px;
     padding-bottom: 20px;
+    justify-content: center;
+}
+
+.movie-view-title-row{
+     font-weight: bold;
+     color: rgb(12, 12, 12);
+     font-size: 2.5em;
+     text-align: center;
 }
 
 .movie-view-title{
-    // display: flex;
-    //  font-weight: bold;
-    //  color: rgb(12, 12, 12);
-    //  font-size: 2.5em;
-    //  padding-bottom: 30px;
-    //  justify-content: center;
+   text-align: center;
 }
 
-.movie-view-image{
+.movie-view-title-col{
     display: flex;
     justify-content: center;
-    // object-fit: cover;
-    ;
+}
+
+.movie-view-card-body{
+   display: flex;
+   justify-content: center;
 }
 
 .movie-view-button{
-    background-color: #fddada;
-    color: rgb(173, 46, 14);
-    font-size: 1.5em;
-    margin-top: 20px;
+    padding-top: 20px;
+    background-color: #a54242;
 }
 
-.movie-view-container{
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.director-button{
+    padding-top: 70px;
+    color: #f06666;
+    text-align: left;
 }
 
-.card-img-top{
+.genre-button{
     display: flex;
     justify-content: center;
+    padding-top: 70px;
+    color: #f06666;
 }

@@ -13,8 +13,8 @@ export class GenreView extends React.Component {
         return (
             <Container fluid>
                 <Card>
-                    <Card.Body>
-                        <Card.Title>Genre</Card.Title>
+                    <Card.Body className="genre-card-body">
+                        <Card.Title className="genre-title">Genre</Card.Title>
                         <Card.Text>
                             <span className="label">Name: </span>
                             <span className="value">{genre.Name}</span>
@@ -27,7 +27,7 @@ export class GenreView extends React.Component {
                         <Button variant="outline-light" onClick={() => { onBackClick(); }}>Back</Button>
                     </Card.Body>
                 </Card>
-                <Row>
+                {/* <Row>
                     {movies.map(movie => (
                         <Card className="favorite-movie card-content" key={movie._id} >
                             <Card.Img
@@ -41,7 +41,7 @@ export class GenreView extends React.Component {
                             </Card.Body>
                         </Card>
                     ))}
-                </Row>
+                </Row> */}
             </Container>
         );
     }

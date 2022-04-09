@@ -9,7 +9,17 @@
 
 .movie-card-container {
   width: 100%;
+  justify-content: center;
   padding-top: 30px;
+  padding-bottom: 50px;
+  display: flex;
+}
+
+.card-body {
+  width: 18rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   padding-bottom: 20px;
   display: flex;
 }
@@ -44,50 +54,48 @@
   justify-content: center;
 }
 
-.movie-view {
-  flex-wrap: wrap;
-  align-items: center;
-  margin: auto;
+.movie-view-card {
+  justify-content: center;
+  margin-top: 20px;
   padding-bottom: 20px;
   display: flex;
 }
 
-.movie-view-image {
+.movie-view-title-row {
+  color: #0c0c0c;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.movie-view-title {
+  text-align: center;
+}
+
+.movie-view-title-col, .movie-view-card-body {
   justify-content: center;
   display: flex;
 }
 
 .movie-view-button {
-  color: #ad2e0e;
-  background-color: #fddada;
-  margin-top: 20px;
-  font-size: 1.5em;
+  background-color: #a54242;
+  padding-top: 20px;
 }
 
-.movie-view-container {
-  text-align: center;
+.director-button {
+  color: #f06666;
+  text-align: left;
+  padding-top: 70px;
+}
+
+.genre-button {
+  color: #f06666;
   justify-content: center;
+  padding-top: 70px;
   display: flex;
 }
 
-.card-img-top {
-  justify-content: center;
-  display: flex;
-}
 
-.main-view {
-  width: 100%;
-  margin-top: 20px;
-}
-
-.main-director-col {
-  justify-content: space-around;
-  display: flex;
-}
-
-.main-view-row {
-  width: auto;
-}
 
 .register-title {
   color: #000;
@@ -123,17 +131,54 @@
   padding-top: 20px;
 }
 
+.navbar-main {
+  justify-content: center;
+  display: flex;
+}
+
 .navbar-container {
   justify-content: left;
   display: flex;
 }
 
+.update-profile.card {
+  background-color: #f89696;
+  flex-direction: column;
+  place-content: center;
+  display: flex;
+}
 
+.genre-title {
+  width: 100%;
+  object-fit: cover;
+  text-align: center;
+}
 
+.genre-card-body {
+  width: auto;
+  color: #fff;
+  background-color: #f38282;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20px;
+  display: flex;
+}
 
+.director-title {
+  width: 100%;
+  object-fit: cover;
+  text-align: center;
+}
 
-.favorite-movie-card {
-  justify-content: center;
+.director-card-body {
+  width: auto;
+  color: #fff;
+  background-color: #f38282;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20px;
   display: flex;
 }
 

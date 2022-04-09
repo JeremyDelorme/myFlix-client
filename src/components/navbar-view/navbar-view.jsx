@@ -29,7 +29,7 @@ export function NavbarView({ user }) {
                 <Navbar.Brand className="navbar-title" as={Link} to={"/"}>myFlix</Navbar.Brand>
                 {isAuth() && (
                     <Nav>
-                        <Nav.Link className="navbar-profile" as={Link} to={"/users/${user}"}>Profile</Nav.Link>
+                        <Nav.Link className="navbar-profile" as={Link} to={"/users/user._id"}>Profile</Nav.Link>
                         <Button className="navbar-button" variant="outline-primary" onClick={() => { onLoggedOut() }}>Logout</Button>
                     </Nav>
                 )}

@@ -76,7 +76,7 @@ export class MainView extends React.Component {
         return (
             <Router>
                 <NavbarView user={user} />
-                <Container fluid>
+                <Container fluid className="main-view-container">
                     <Row className="main-view-row">
                         <Route exact path="/" render={() => {
                             if (!user) return <Col>
@@ -84,7 +84,7 @@ export class MainView extends React.Component {
                             </Col>
                             if (movies.length === 0) return <div className="main-view" />;
                             return movies.map(m => (
-                                <Col lg={3} md={4} sm={6} xs={12} key={m._id}>
+                                <Col key={m._id}>
                                     <MovieCard movie={m} />
                                 </Col>
                             ))
@@ -100,16 +100,16 @@ export class MainView extends React.Component {
                         <Route path="/movies/:movieId" render={({ match, history }) => {
                             if (movies.length === 0) return <div className="main-view" />;
                             return (
-                                <Col lg={3} md={4} sm={6} xs={12}>
+                                <Col>
                                     <MovieView movie={movies.find(m => m._id === match.params.movieId)} onBackClick={() => history.goBack()} />
                                 </Col>
                             )
                         }} />
 
-                        <Route path={"/users/${user}"} render={({ history }) => {
+                        <Route path={"/users/:userId"} render={({ history }) => {
                             if (!user) return <Redirect to="/" />
                             return (
-                                <Col lg={3} md={4} sm={6} xs={12}>
+                                <Col>
                                     <ProfileView user={user} movies={movies} onBackClick={() => history.goBack()} />
                                 </Col>
                             )
@@ -120,7 +120,7 @@ export class MainView extends React.Component {
                             // If movie list is empty (while movies load from API), display empty page
                             if (movies.length === 0) return <div className="main-view" />;
                             return (
-                                <Col className="main-director-col" lg={3} md={4} sm={6} xs={12}>
+                                <Col className="main-director-col">
                                     <DirectorView movies={movies} director={movies.find(m => m.Director.Name === match.params.name).Director} onBackClick={() => history.goBack()} />
                                 </Col>
                             )
@@ -131,7 +131,7 @@ export class MainView extends React.Component {
                             // If movie list is empty (while movies load from API), display empty page
                             if (movies.length === 0) return <div className="main-view" />;
                             return (
-                                <Col lg={3} md={4} sm={6} xs={12}>
+                                <Col>
                                     <GenreView movies={movies} genre={movies.find(m => m.Genre.Name === match.params.name).Genre} onBackClick={() => history.goBack()} />
                                 </Col>
                             )
