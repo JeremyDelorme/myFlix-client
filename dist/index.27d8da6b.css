@@ -7,91 +7,66 @@
   margin-top: 20px;
 }
 
-.movie-card-container {
-  width: 100%;
-  justify-content: center;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  display: flex;
-}
-
-.card-body {
-  width: 18rem;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 20px;
-  display: flex;
-}
-
-.movie-title {
-  width: 100%;
-  object-fit: cover;
-  text-align: center;
-}
-
-.movie-image {
-  width: 100%;
-  height: 15vw;
-  object-fit: cover;
-  display: flex;
-}
-
-.card-button {
-  color: #e03a10;
-  background-color: #fddada;
-  margin: auto auto 20px;
-  font-size: 1.5em;
-  display: flex;
-}
-
-.card-group {
-  justify-content: center;
-  display: flex;
-}
-
-.card {
-  justify-content: center;
-}
-
 .movie-view-card {
+  background-color: #ec8181;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
-  padding-bottom: 20px;
+  display: flex;
+}
+
+.movie-view-container {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   display: flex;
 }
 
 .movie-view-title-row {
   color: #0c0c0c;
-  text-align: center;
+  justify-content: center;
   font-size: 2.5em;
   font-weight: bold;
+  display: flex;
 }
 
-.movie-view-title {
-  text-align: center;
-}
-
-.movie-view-title-col, .movie-view-card-body {
+.movie-view-title-card-body {
+  background-color: #ec8181;
   justify-content: center;
   display: flex;
 }
 
+.movie-view-col, .movie-view-title {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.movie-view-title-col {
+  justify-content: center;
+  display: flex;
+}
+
+.movie-view-image {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .movie-view-button {
   background-color: #a54242;
-  padding-top: 20px;
+  margin-top: 20px;
 }
 
-.director-button {
-  color: #f06666;
-  text-align: left;
-  padding-top: 70px;
+.director-button, .genre-button {
+  color: #fff;
+  padding-top: -40px;
+  display: flex;
 }
 
-.genre-button {
-  color: #f06666;
+.director-genre-div {
   justify-content: center;
-  padding-top: 70px;
+  align-items: center;
   display: flex;
 }
 
@@ -141,10 +116,37 @@
   display: flex;
 }
 
-.update-profile.card {
+.profile-view-row {
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.profile-view-col {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.profile-view-card {
+  width: 1000px;
   background-color: #f89696;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.profile-view-container {
+  width: 2000px;
+  height: 500px;
   flex-direction: column;
-  place-content: center;
+  align-items: center;
+  padding-top: 150px;
+  display: flex;
+}
+
+.profile-card-body {
   display: flex;
 }
 
@@ -180,6 +182,52 @@
   align-items: center;
   padding-bottom: 20px;
   display: flex;
+}
+
+.movie-card-container {
+  width: 100%;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  display: flex;
+}
+
+.card-body {
+  width: 18rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  display: flex;
+}
+
+.movie-title {
+  width: 100%;
+  object-fit: cover;
+  text-align: center;
+}
+
+.movie-image {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+  display: flex;
+}
+
+.card-button {
+  color: #e03a10;
+  background-color: #fddada;
+  margin: auto auto 20px;
+  font-size: 1.5em;
+  display: flex;
+}
+
+.card-group {
+  justify-content: center;
+  display: flex;
+}
+
+.card {
+  justify-content: center;
 }
 
 .app-container, html, body {

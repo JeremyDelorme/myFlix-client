@@ -1,19 +1,45 @@
 .movie-view-card{
     display: flex;
-    margin-top: 20px;
-    padding-bottom: 20px;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #ec8181;
 }
 
+.movie-view-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 .movie-view-title-row{
+    display: flex;
      font-weight: bold;
      color: rgb(12, 12, 12);
      font-size: 2.5em;
-     text-align: center;
+     justify-content: center;
+}
+
+.movie-view-title-card-body{
+    display: flex;
+    justify-content: center;
+    background-color: #ec8181;
+}
+.movie-view-row{
+
+}
+
+.movie-view-col{
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 .movie-view-title{
-   text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 .movie-view-title-col{
@@ -21,25 +47,36 @@
     justify-content: center;
 }
 
-.movie-view-card-body{
-   display: flex;
-   justify-content: center;
+.movie-view-image{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .movie-view-button{
-    padding-top: 20px;
     background-color: #a54242;
+    margin-top: 20px;
 }
 
 .director-button{
+    display: flex;
     padding-top: 70px;
-    color: #f06666;
-    text-align: left;
+    color: #ffffff;
+    padding-top: -40px;
 }
 
 .genre-button{
     display: flex;
-    justify-content: center;
     padding-top: 70px;
-    color: #f06666;
+    color: #ffffff;
+    padding-top: -40px;
+}
+
+.director-genre-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-view-favorite-row{
+    
 }

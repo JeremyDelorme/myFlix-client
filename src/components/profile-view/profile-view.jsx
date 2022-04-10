@@ -110,6 +110,29 @@ export class ProfileView extends React.Component {
             });
     };
 
+    // Add a movie from FavoriteMovies list
+    onAddFavorite = (e, movie) => {
+        e.preventDefault();
+        const Username = localStorage.getItem('user');
+        const token = localStorage.getItem('token');
+
+        axios
+            .add(
+                `https://movie-api-jeremydelorme.herokuapp.com/users/${Username}/movies/${movie._id}`,
+                {
+                    headers: { Authorization: `Bearer ${token}` },
+                }
+            )
+            .then((response) => {
+                console.log(response);
+                alert("Movie added");
+                this.componentDidMount();
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    };
+
     // Deregister
     onDeleteUser() {
         const Username = localStorage.getItem('user');
@@ -164,10 +187,10 @@ export class ProfileView extends React.Component {
         }
 
         return (
-            <Container className="profile-view-container" align="center">
+            <Container className="profile-view">
                 <Row>
                     <Col>
-                        <Card className="update-profile">
+                        <Card className="profile-view-card">
                             <Card.Body>
                                 <Card.Title>Profile</Card.Title>
                                 <Form

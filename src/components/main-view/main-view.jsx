@@ -1,44 +1,32 @@
 import React from 'react';
 import axios from 'axios';
 
+import { connect } from 'react-redux';
+
 import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import { setMovies } from '../../actions/actions';
+import MoviesList from '../movies-list/movies-list';
 
 import { Navbar, Container, Col, Row } from 'react-bootstrap';
 import "./main-view.scss"
 
 import { RegistrationView } from '../registration-view/registration-view';
 import { LoginView } from '../login-view/login-view';
-import { MovieCard } from '../movie-card/movie-card';
+// import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { NavbarView } from '../navbar-view/navbar-view';
 import { ProfileView } from '../profile-view/profile-view';
 import { GenreView } from '../genre-view/genre-view';
 import { DirectorView } from '../director-view/director-view';
 
-export class MainView extends React.Component {
+class MainView extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            movies: [],
-            selectedMovie: null,
             user: null
         };
-    }
-
-    getMovies(token) {
-        axios.get('https://movie-api-jeremydelorme.herokuapp.com/movies', {
-            headers: { Authorization: `Bearer ${token}` }
-        })
-            .then(response => {
-                // Assign the result to the state
-                this.setState({
-                    movies: response.data
-                });
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
     }
 
     componentDidMount() {
@@ -49,6 +37,18 @@ export class MainView extends React.Component {
             });
             this.getMovies(accessToken);
         }
+    }
+
+    getMovies(token) {
+        axios.get('https://movie-api-jeremydelorme.herokuapp.com/movies', {
+            headers: { Authorization: `Bearer ${token}` }
+        })
+            .then(response => {
+                this.props.setMovies(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 
     onLoggedIn(authData) {
@@ -71,7 +71,8 @@ export class MainView extends React.Component {
     }
 
     render() {
-        const { movies, user } = this.state;
+        let { movies } = this.props;
+        let { user } = this.state;
 
         return (
             <Router>
@@ -83,11 +84,7 @@ export class MainView extends React.Component {
                                 <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
                             </Col>
                             if (movies.length === 0) return <div className="main-view" />;
-                            return movies.map(m => (
-                                <Col key={m._id}>
-                                    <MovieCard movie={m} />
-                                </Col>
-                            ))
+                            return <MoviesList movies={movies} />;
                         }} />
                         <Route path="/register" render={() => {
                             return (
@@ -143,4 +140,8 @@ export class MainView extends React.Component {
     }
 }
 
-export default MainView;
+let mapStateToProps = state => {
+    return { movies: state.movies }
+}
+
+export default connect(mapStateToProps, { setMovies })(MainView);
