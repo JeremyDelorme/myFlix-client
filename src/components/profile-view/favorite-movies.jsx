@@ -17,9 +17,9 @@ export function FavoriteMovies({ favoriteMovieList, removeFav }) {
             <Row className="justify-content-md-center">
                 {favoriteMovieList.map(movie => {
                     return (
-                        <Col xs={12} sm={6} md={4} className="d-flex" key={movie._id}>
-                            <Card text="dark" border="dark" className="mb-3">
-                                <Card.Img variant="top" src={movie.ImagePath} className="img-responsive" />
+                        <Col xs={12} sm={6} md={4} key={movie._id}>
+                            <Card>
+                                <Card.Img variant="top" src={movie.ImagePath} />
                                 <Card.Body>
                                     <Card.Title>{movie.Title}</Card.Title>
                                     <Link to={`/movies/${movie._id}`}>

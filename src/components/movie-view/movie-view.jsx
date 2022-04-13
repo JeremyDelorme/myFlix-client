@@ -17,7 +17,7 @@ export class MovieView extends React.Component {
         document.removeEventListener('keypress', this.keypressCallback);
     }
     render() {
-        const { movie, onBackClick } = this.props;
+        const { movie } = this.props;
 
         return (
             <Container className="movie-view-container">
@@ -63,10 +63,14 @@ export class MovieView extends React.Component {
                         </Card>
                     </Col>
                 </Row>
-                <Link to={"/"}>
-                    <Button className="movie-view-button" variant="outline-light">Back to full list</Button>
-                    <Button className="movie-view-button" onClick={() => { }}>Add to favorites</Button>
-                </Link>
+                <div className="back-fav-buttons">
+                    <Link to={"/"}>
+                        <Button className="movie-view-button">Back to full list</Button>
+                    </Link>
+                    <Link to={`/movies/${movie._id}`}>
+                        <Button className="movie-view-button" onClick={() => { }}>Add to favorites</Button>
+                    </Link>
+                </div>
             </Container >
         );
     }

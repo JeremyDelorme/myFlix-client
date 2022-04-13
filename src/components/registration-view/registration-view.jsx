@@ -11,25 +11,60 @@ export function RegistrationView(props) {
     const [email, setEmail] = useState('');
     const [birthday, setBirthday] = useState('');
 
+    // Declare hook for each input
+    const [usernameErr, setUsernameErr] = useState('');
+    const [passwordErr, setPasswordErr] = useState('');
+    const [emailErr, setEmailErr] = useState('');
+
+    // validate user inputs
+    const validate = () => {
+        let isReq = true;
+        if (!username) {
+            setUsernameErr('Username Required');
+            isReq = false;
+        } else if (username.length < 2) {
+            setUsernameErr('Username must be 2 characters long');
+            isReq = false;
+        }
+        if (!password) {
+            setPasswordErr('Password Required');
+            isReq = false;
+        } else if (password.length < 6) {
+            setPassword('Password must be 6 characters long');
+            isReq = false;
+        }
+        if (!email) {
+            setEmailErr('Email Required');
+            isReq = false;
+        }
+
+
+        return isReq;
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        /* Send a request to the server for authentication */
-        axios.post('https://movie-api-jeremydelorme.herokuapp.com/users', {
-            Username: username,
-            Password: password,
-            Email: email,
-            Birthday: birthday
-        })
-            .then(response => {
-                const data = response.data;
-                console.log(data);
-                alert("registration successful, please login!")
-                window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
+        const isReq = validate();
+        console.log(isReq);
+        if (isReq) {
+            /* Send a request to the server for authentication */
+            axios.post('https://movie-api-jeremydelorme.herokuapp.com/users', {
+                Username: username,
+                Password: password,
+                Email: email,
+                Birthday: birthday
             })
-            .catch(e => {
-                console.log('error registering the user')
-                alert("Unable to register")
-            });
+                .then(response => {
+                    const data = response.data;
+                    console.log(data);
+                    alert("registration successful, please login!")
+                    window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
+                })
+                .catch(e => {
+                    console.log('error registering the user')
+                    alert("Unable to register")
+                });
+        }
     };
 
 
@@ -52,6 +87,8 @@ export function RegistrationView(props) {
                                             required
                                             placeholder="Enter a username"
                                         />
+                                        {/* code added here to display validation error */}
+                                        {usernameErr && <p>{usernameErr}</p>}
                                     </Form.Group>
 
                                     <Form.Group>
@@ -64,6 +101,8 @@ export function RegistrationView(props) {
                                             placeholder="Enter a Password"
                                             minLength="8"
                                         />
+                                        {/* code added here to display validation error */}
+                                        {passwordErr && <p>{passwordErr}</p>}
                                     </Form.Group>
 
                                     <Form.Group>
@@ -75,6 +114,8 @@ export function RegistrationView(props) {
                                             required
                                             placeholder="Enter your email adress"
                                         />
+                                        {/* code added here to display validation error */}
+                                        {emailErr && <p>{emailErr}</p>}
                                     </Form.Group>
 
                                     <Form.Group>
