@@ -1,17 +1,17 @@
 # MyFlix-client
 
-## Description
+## DESCRIPTION
 
 This project is using React to build the client-side for an application called myFlix based on its existing server-side code (REST API and database).
 
-## Technologies used
+## TECHNOLOGIES USED
 
 React.js                  
 Bootstrap                       
 Sass                        
 Node.js
 
-## Features
+## FEATURES
 
 - Users can login ot register for an account at the welcome view.             
 - Users are registered successfully and then be able to see a list of movies.                           
@@ -19,3 +19,9 @@ Node.js
 - Users can add movie to a personal favorite list.  
 - Users can remove movies from the personal favorite list.  
 - Users can change profile details and delete profile.
+
+## WHAT IT LOOKS LIKE
+
+
+## LIVE DEMO LINK
+
