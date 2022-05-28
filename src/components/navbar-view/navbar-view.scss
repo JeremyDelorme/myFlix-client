@@ -1,5 +1,5 @@
 .navbar{
-    background-color: #f5b6b6;
+    background-color: #ffd3aa;
     padding-top: 20px;
     margin-bottom: 20px;
     margin-top: -10px;
@@ -8,14 +8,12 @@
 
   .navbar-main{
     display: flex;
-    justify-content: center;
-  }
-
-  .navbar-title{
-  
+    justify-content: left;
   }
 
 .navbar-container{
     display: flex;
-    justify-content:left;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
 }

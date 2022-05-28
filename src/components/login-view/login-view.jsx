@@ -54,12 +54,12 @@ export function LoginView(props) {
     };
 
     return (
-        <Container>
-            <Row>
-                <Col>
-                    <CardGroup>
+        <Container className='login-container'>
+            <Row className='login-row'>
+                <Col className='login-col'>
+                    <CardGroup className='login-card-group'>
                         <Card className="login-card">
-                            <Card.Body>
+                            <Card.Body className='login-card-body'>
                                 <Card.Title className="login-title">Please login</Card.Title>
                                 <Form>
                                     <Form.Group>

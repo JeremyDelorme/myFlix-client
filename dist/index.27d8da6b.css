@@ -1,5 +1,27 @@
+.login-container, .login-row, .login-col, .login-card-group {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.card-group {
+  text-align: center;
+  width: 400px;
+  justify-content: center;
+  display: flex;
+}
+
 .login-card {
-  background-color: #fddada;
+  text-align: center;
+  background-color: #fcf0e3;
+  justify-content: center;
+  padding-top: 50px;
+  display: flex;
+}
+
+.login-card-body {
+  text-align: center;
+  justify-content: center;
 }
 
 .login-button {
@@ -38,6 +60,11 @@
   background-color: #ec8181;
 }
 
+.movie-view-image {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .movie-view-button.btn {
   background-color: #a54242;
   justify-content: center;
@@ -62,8 +89,8 @@
   display: flex;
 }
 
-.main-view-row.row {
-  width: 100%;
+.main-view-container {
+  text-align: center;
   justify-content: center;
   display: flex;
 }
@@ -102,10 +129,10 @@
   display: flex;
 }
 
-.card-body {
+.movie-card-body {
   width: 18rem;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   padding-bottom: 20px;
   display: flex;
 }
@@ -123,7 +150,7 @@
   display: flex;
 }
 
-.card-button {
+.movie-card-button {
   color: #e03a10;
   background-color: #fddada;
   margin: auto auto 20px;
@@ -142,19 +169,21 @@
 
 .navbar {
   width: 100%;
-  background-color: #f5b6b6;
+  background-color: #ffd3aa;
   margin-top: -10px;
   margin-bottom: 20px;
   padding-top: 20px;
 }
 
 .navbar-main {
-  justify-content: center;
+  justify-content: left;
   display: flex;
 }
 
 .navbar-container {
-  justify-content: left;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
   display: flex;
 }
 
@@ -226,8 +255,8 @@
   display: flex;
 }
 
-.app-container, html, body {
-  background-color: #fddada;
+html, body {
+  background-color: #fff2e9;
 }
 
 /*# sourceMappingURL=index.27d8da6b.css.map */

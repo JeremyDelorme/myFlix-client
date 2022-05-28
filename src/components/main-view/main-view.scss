@@ -1,11 +1,6 @@
-// .row{
-//     display: flex;
-//     justify-content: center;
-//     width: 1000px;
-// }
-
-.main-view-row.row{
-    width: 100%;
+.main-view-container {
     display: flex;
+    text-align: center;
     justify-content: center;
 }
+

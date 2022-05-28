@@ -14,7 +14,6 @@ import "./main-view.scss"
 
 import { RegistrationView } from '../registration-view/registration-view';
 import { LoginView } from '../login-view/login-view';
-// import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { NavbarView } from '../navbar-view/navbar-view';
 import { ProfileView } from '../profile-view/profile-view';
@@ -71,7 +70,7 @@ class MainView extends React.Component {
         });
     }
 
-    
+
 
     render() {
         let { movies } = this.props;

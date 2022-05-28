@@ -6,10 +6,9 @@
     justify-content: center;
 }  
 
-.card-body{
+.movie-card-body{
     display: flex;
-    // align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     padding-bottom: 20px;
     width: 18rem;
@@ -28,7 +27,7 @@
     object-fit: cover;
 }
 
-.card-button{
+.movie-card-button{
     display: flex;
     background-color: #fddada;
     color:rgb(224, 58, 16);
