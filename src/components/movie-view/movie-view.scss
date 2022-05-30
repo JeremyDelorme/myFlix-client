@@ -1,0 +1,25 @@
+.movie-view-container {
+    width: 40%;
+}
+
+.card-text {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 22px;
+}
+
+.buttons-row {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.buttons-design {
+    background-color: rgb(230, 169, 119);
+    color: rgb(0, 0, 0);
+}
+
+.movie-view-col {
+    align-items: stretch;
+}

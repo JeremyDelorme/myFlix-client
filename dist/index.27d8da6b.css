@@ -1,12 +1,55 @@
 
 
+.movie-view-container {
+  width: 40%;
+}
+
+.card-text {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 22px;
+}
+
+.buttons-row {
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  display: flex;
+}
+
+.buttons-design {
+  color: #000;
+  background-color: #e6a977;
+}
+
+.movie-view-col {
+  align-items: stretch;
+}
+
+.main-container {
+  max-width: 100%;
+}
 
 
 
+.movie-card-container {
+  align-items: stretch;
+}
 
+.movie-card-card-body {
+  align-items: stretch;
+  padding-bottom: 20px;
+}
 
+.movie-card-card-group {
+  text-align: center;
+  height: 75%;
+  padding-bottom: 30px;
+}
 
-
+.movie-card-img {
+  width: 200px;
+}
 
 
 

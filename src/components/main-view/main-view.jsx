@@ -79,12 +79,12 @@ class MainView extends React.Component {
         return (
             <Router>
                 <NavbarView user={user} />
-                <Container fluid>
+                <Container className='main-container' fluid>
                     <Row >
                         <Route exact path="/" render={() => {
                             if (!user) return <Col>
                                 <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
-                            </Col>
+                            </Col >
                             if (movies.length === 0) return <div />;
                             return <MoviesList movies={movies} />;
                         }} />

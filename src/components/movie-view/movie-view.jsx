@@ -20,34 +20,32 @@ export class MovieView extends React.Component {
         const { movie } = this.props;
 
         return (
-            <Container >
+            <Container className='movie-view-container'>
 
                 <h2 >{movie.Title}</h2>
                 <Row >
-                    <Col >
+                    <Col className='movie-view-col'>
                         <Card >
-                            <Card.Body>
+                            <Card.Body className='movie-view-card-body'>
                                 <Card.Img fluid src={movie.ImagePath} />
                                 <Card.Text >
                                     {movie.Description}</Card.Text>
                                 <Card.Text >
                                     Director: {movie.Director.Name}
                                 </Card.Text>
-                                <br />
                                 <Card.Text>
                                     Genre: {movie.Genre.Name}
                                 </Card.Text>
-                                <br />
                             </Card.Body>
                         </Card>
                     </Col>
                 </Row>
-                <Row >
+                <Row className='buttons-row'>
                     <Link to={"/"}>
-                        <Button >Back to full list</Button>
+                        <Button className='buttons-design'>Back to full list</Button>
                     </Link>
                     <Link to={`/movies/${movie._id}`}>
-                        <Button onClick={() => { }}>Add to favorites</Button>
+                        <Button className='buttons-design' onClick={() => { }}>Add to favorites</Button>
                     </Link>
                 </Row>
 
