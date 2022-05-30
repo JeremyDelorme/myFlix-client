@@ -16,6 +16,22 @@ export class MovieView extends React.Component {
     componentWillUnmount() {
         document.removeEventListener('keypress', this.keypressCallback);
     }
+
+    addToFavoriteList(movieId) {
+        const currentUser = localStorage.getItem('user');
+        const token = localStorage.getItem('token');
+        axios.patch(`https://movie-api-jeremydelorme.herokuapp.com/users/${currentUser}/movies/${movieId}`,
+            {},
+            {
+                headers: { Authorization: `Bearer ${token}` }
+            })
+            .then((response) => {
+                console.log(response.data)
+                alert(`The movie was successfully add to your list.`)
+            }).
+            catch(error => console.error(error))
+    }
+
     render() {
         const { movie } = this.props;
 
@@ -45,7 +61,7 @@ export class MovieView extends React.Component {
                         <Button className='buttons-design'>Back to full list</Button>
                     </Link>
                     <Link to={`/movies/${movie._id}`}>
-                        <Button className='buttons-design' onClick={() => { }}>Add to favorites</Button>
+                        <Button className='buttons-design' onClick={() => this.addToFavoriteList(movie._id)}>Add to favorites</Button>
                     </Link>
                 </Row>
 

@@ -26,6 +26,10 @@
   align-items: stretch;
 }
 
+.card-body {
+  min-height: 375px;
+}
+
 .main-container {
   max-width: 100%;
 }
