@@ -79,27 +79,27 @@ class MainView extends React.Component {
         return (
             <Router>
                 <NavbarView user={user} />
-                <Container fluid className="main-view-container">
-                    <Row className="main-view-row">
+                <Container fluid>
+                    <Row >
                         <Route exact path="/" render={() => {
                             if (!user) return <Col>
-                                <LoginView md={6} onLoggedIn={user => this.onLoggedIn(user)} />
+                                <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
                             </Col>
-                            if (movies.length === 0) return <div className="main-view" />;
+                            if (movies.length === 0) return <div />;
                             return <MoviesList movies={movies} />;
                         }} />
                         <Route path="/register" render={() => {
                             return (
-                                <Col xs={12} md={8}>
+                                <Col >
                                     <RegistrationView />
                                 </Col>
                             )
                         }} />
 
                         <Route path="/movies/:movieId" render={({ match, history }) => {
-                            if (movies.length === 0) return <div className="main-view" />;
+                            if (movies.length === 0) return <div />;
                             return (
-                                <Col xs={12} sm={6} md={4} lg={3} >
+                                <Col fluid>
                                     <MovieView movie={movies.find(m => m._id === match.params.movieId)} onBackClick={() => history.goBack()} />
                                 </Col>
                             )
@@ -108,7 +108,7 @@ class MainView extends React.Component {
                         <Route path={"/users/:userId"} render={({ history }) => {
                             if (!user) return <Redirect to="/" />
                             return (
-                                <Col xs={12} md={10}>
+                                <Col >
                                     <ProfileView user={user} movies={movies} onBackClick={() => history.goBack()} />
                                 </Col>
                             )
@@ -117,9 +117,9 @@ class MainView extends React.Component {
                         <Route path={"/directors/:name"} render={({ match, history }) => {
                             if (!user) return <Redirect to="/" />
                             // If movie list is empty (while movies load from API), display empty page
-                            if (movies.length === 0) return <div className="main-view" />;
+                            if (movies.length === 0) return <div />;
                             return (
-                                <Col xs={12} md={10} className="main-director-col">
+                                <Col  >
                                     <DirectorView movies={movies} director={movies.find(m => m.Director.Name === match.params.name).Director} onBackClick={() => history.goBack()} />
                                 </Col>
                             )
@@ -130,7 +130,7 @@ class MainView extends React.Component {
                             // If movie list is empty (while movies load from API), display empty page
                             if (movies.length === 0) return <div className="main-view" />;
                             return (
-                                <Col xs={12} md={10}>
+                                <Col >
                                     <GenreView movies={movies} genre={movies.find(m => m.Genre.Name === match.params.name).Genre} onBackClick={() => history.goBack()} />
                                 </Col>
                             )

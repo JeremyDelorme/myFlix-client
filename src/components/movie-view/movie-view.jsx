@@ -20,24 +20,17 @@ export class MovieView extends React.Component {
         const { movie } = this.props;
 
         return (
-            <Container className="movie-view-container">
-                <Row className="movie-view-title-row">
-                    <Col className="movie-view-title-col">
-                        <Card className="movie-view-title-card">
-                            <Card.Body className="movie-view-title-card-body">
-                                <Card.Title className="movie-view-title">{movie.Title}</Card.Title>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
-                <Row className="movie-view-row">
-                    <Col className="movie-view-col">
-                        <Card className="movie-view-card">
-                            <Card.Body className="movie-view-card-body">
-                                <Card.Img className="movie-view-image" src={movie.ImagePath} />
-                                <Card.Text className="movie-description">
+            <Container >
+
+                <h2 >{movie.Title}</h2>
+                <Row >
+                    <Col >
+                        <Card >
+                            <Card.Body>
+                                <Card.Img fluid src={movie.ImagePath} />
+                                <Card.Text >
                                     {movie.Description}</Card.Text>
-                                <Card.Text className="director-card-text">
+                                <Card.Text >
                                     Director: {movie.Director.Name}
                                 </Card.Text>
                                 <br />
@@ -45,32 +38,19 @@ export class MovieView extends React.Component {
                                     Genre: {movie.Genre.Name}
                                 </Card.Text>
                                 <br />
-                                <div className="director-genre-div">
-                                    <br />
-                                    <div>
-                                        <Link to={`/directors/${movie.Director.Name}`}>
-                                            <Button className="director-button" variant="link">Director</Button>
-                                        </Link>
-                                    </div>
-                                    <div>
-                                        <Link to={`/genres/${movie.Genre.Name}`}>
-                                            <Button className="genre-button" variant="link">Genre</Button>
-                                        </Link>
-                                    </div>
-                                </div>
-
                             </Card.Body>
                         </Card>
                     </Col>
                 </Row>
-                <div className="back-fav-buttons">
+                <Row >
                     <Link to={"/"}>
-                        <Button className="movie-view-button">Back to full list</Button>
+                        <Button >Back to full list</Button>
                     </Link>
                     <Link to={`/movies/${movie._id}`}>
-                        <Button className="movie-view-button" onClick={() => { }}>Add to favorites</Button>
+                        <Button onClick={() => { }}>Add to favorites</Button>
                     </Link>
-                </div>
+                </Row>
+
             </Container >
         );
     }
