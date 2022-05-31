@@ -80,14 +80,14 @@ class MainView extends React.Component {
                 <NavbarView user={user} />
                 <Container className='main-container' fluid>
                     <Row >
-                        <Route exact path="/" render={() => {
+                        <Route exact path="/myFlix-client" render={() => {
                             if (!user) return <Col>
                                 <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
                             </Col >
                             if (movies.length === 0) return <div />;
                             return <MoviesList movies={movies} />;
                         }} />
-                        <Route path="/register" render={() => {
+                        <Route path="myFlix-client/register" render={() => {
                             return (
                                 <Col >
                                     <RegistrationView />
@@ -95,7 +95,7 @@ class MainView extends React.Component {
                             )
                         }} />
 
-                        <Route path="/movies/:movieId" render={({ match, history }) => {
+                        <Route path="myFlix-client/movies/:movieId" render={({ match, history }) => {
                             if (movies.length === 0) return <div />;
                             return (
                                 <Col fluid>
@@ -104,7 +104,7 @@ class MainView extends React.Component {
                             )
                         }} />
 
-                        <Route path={"/users/:userId"} render={({ history }) => {
+                        <Route path={"myFlix-client/users/:userId"} render={({ history }) => {
                             if (!user) return <Redirect to="/" />
                             return (
                                 <Col >
@@ -113,7 +113,7 @@ class MainView extends React.Component {
                             )
                         }} />
 
-                        <Route path={"/directors/:name"} render={({ match, history }) => {
+                        <Route path={"myFlix-client/directors/:name"} render={({ match, history }) => {
                             if (!user) return <Redirect to="/" />
                             // If movie list is empty (while movies load from API), display empty page
                             if (movies.length === 0) return <div />;
@@ -124,7 +124,7 @@ class MainView extends React.Component {
                             )
                         }} />
 
-                        <Route path={"/genres/:name"} render={({ match, history }) => {
+                        <Route path={"myFlix-client/genres/:name"} render={({ match, history }) => {
                             if (!user) return <Redirect to="/" />
                             // If movie list is empty (while movies load from API), display empty page
                             if (movies.length === 0) return <div className="main-view" />;
