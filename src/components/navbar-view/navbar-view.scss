@@ -1,5 +1,4 @@
 .navbar-main {
-
 }
 
 .navbar-title {
@@ -8,4 +7,27 @@
 
 .navbar-container {
 
+}
+
+.navbar-button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    width: 100%;
+}
+
+.navbar-button:hover {
+    background-color: rgb(122, 43, 43);
+}
+
+.nav-link {
+    color: black;
+    background-color: transparent;
+    margin-right: 10px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.navbar-profile:hover {
+    background-color: rgb(122, 43, 43);
 }

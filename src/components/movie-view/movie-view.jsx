@@ -43,10 +43,10 @@ export class MovieView extends React.Component {
                     <Col className='movie-view-col'>
                         <Card >
                             <Card.Body className='movie-view-card-body'>
-                                <Card.Img fluid src={movie.ImagePath} />
+                                <Card.Img className='movie-view-img' src={movie.ImagePath} />
                                 <Card.Text >
                                     {movie.Description}</Card.Text>
-                                <Card.Text >
+                                <Card.Text className='card-text'>
                                     Director: {movie.Director.Name}
                                 </Card.Text>
                                 <Card.Text>

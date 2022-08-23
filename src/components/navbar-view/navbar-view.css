@@ -1,0 +1,23 @@
+.navbar-button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  width: 100%;
+}
+
+.navbar-button:hover {
+  background-color: #7a2b2b;
+}
+
+.nav-link {
+  color: black;
+  background-color: transparent;
+  margin-right: 10px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.navbar-profile:hover {
+  background-color: #7a2b2b;
+}
+/*# sourceMappingURL=navbar-view.css.map */

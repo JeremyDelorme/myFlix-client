@@ -1,0 +1,56 @@
+h3 {
+    padding-bottom: 20px;
+}
+
+.favorite-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.favorite-movie {
+    padding: 20px;
+    margin: 20px;
+    max-width: 100%;
+}
+
+.fav-poster {
+    width: 100%;
+}
+
+.profile-movie-row {
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+}
+
+.buttons-design {
+    border: none;
+    margin-top: 50px;
+}
+
+.buttons-design:hover {
+    background-color: rgb(122, 43, 43);
+}
+
+.remove-buttons {
+    background-color: rgb(122, 43, 43);
+    border: none;
+}
+
+.remove-buttons:hover {
+    background-color: rgb(230, 169, 119);
+    color: black;
+}
+
+.back-button {
+    background-color: rgb(122, 43, 43);
+    border: none;
+}
+
+.back-button:hover {
+    background-color: rgb(230, 169, 119);
+    color: black;
+}

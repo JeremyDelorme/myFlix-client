@@ -1,0 +1,11 @@
+.movie-list-col {
+  max-width: 100%;
+}
+
+.visibility-filter-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20px;
+}
+/*# sourceMappingURL=movies-list.css.map */

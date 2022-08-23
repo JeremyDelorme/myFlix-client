@@ -1,5 +1,13 @@
 .movie-view-container {
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-view-img {
+    display: flex;
+    width: 70%;
+    max-height: 10%;
+    padding-top: 40px;
 }
 
 .card-text {
@@ -24,6 +32,15 @@
     align-items: stretch;
 }
 
-.card-body {
+.movie-view-card-body {
+    display: flex;
     min-height: 375px;
+    background-color: none;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-text {
+    margin: 30px;
 }

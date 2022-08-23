@@ -259,18 +259,19 @@ export class ProfileView extends React.Component {
                         </Card>
                     </Col>
                 </Row>
-                <Row style={{ marginTop: "20px" }}>
+                <Row className="favorite-container">
                     <Col>
-                        <h4>{Username} Favorite Movies</h4>
+                        <h3>{Username}</h3>
+                        <h4>Favorite movies</h4>
                     </Col>
                 </Row>
-                <Row>
-                    <Col>
+                <Row fluid>
+                    <Col fluid>
                         <Card.Body>
                             {FavoriteMovies.length === 0 && (
                                 <div className="text-center">No Favorite Movies</div>
                             )}
-                            <Row className="favorite-container">
+                            <Row fluid className='profile-movie-row'>
                                 {FavoriteMovies.length > 0 &&
                                     movies.map((movie) => {
                                         if (
@@ -278,17 +279,17 @@ export class ProfileView extends React.Component {
                                             FavoriteMovies.find((fav) => fav === movie._id)
                                         ) {
                                             return (
-                                                <Card className="favorite-movie card-content" key={movie._id} >
+                                                <Card className="favorite-movie" key={movie._id} >
                                                     <Card.Img
                                                         className="fav-poster"
                                                         variant="top"
                                                         src={movie.ImagePath}
                                                     />
-                                                    <Card.Body style={{ backgroundColor: "black" }}>
+                                                    <Card.Body >
                                                         <Card.Title className="movie_title">
                                                             {movie.Title}
                                                         </Card.Title>
-                                                        <Button size="sm" variant="danger" value={movie._id} onClick={(e) => this.onRemoveFavorite(e, movie)}>Remove</Button>
+                                                        <Button size="sm" className='remove-buttons' value={movie._id} onClick={(e) => this.onRemoveFavorite(e, movie)}>Remove</Button>
                                                     </Card.Body>
                                                 </Card>
                                             );
@@ -299,10 +300,10 @@ export class ProfileView extends React.Component {
                     </Col>
                 </Row>
                 <div className="backButton">
-                    <Button variant="outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
+                    <Button className='back-button' onClick={() => { onBackClick(null); }}>Back</Button>
                 </div>
                 <br />
-            </Container>
+            </Container >
         );
     }
 }

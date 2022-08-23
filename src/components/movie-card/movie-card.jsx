@@ -10,7 +10,7 @@ export class MovieCard extends React.Component {
         const { movie } = this.props;
 
         return (
-            <Container className="movie-card-container">
+            <Container className="movie-card-container flex-grow-1 h-100">
                 <CardGroup className='movie-card-card-group'>
                     <Card className='movie-card-card-body'>
                         <Card.Body>
@@ -18,7 +18,7 @@ export class MovieCard extends React.Component {
                             <a><Card.Img className='movie-card-img' src={movie.ImagePath} /></a>
                         </Card.Body>
                         <Link to={`/movies/${movie._id}`}>
-                            <Button className='buttons-design' variant="link">Show more</Button>
+                            <Button className='buttons-design' >Show more</Button>
                         </Link>
                     </Card>
                 </CardGroup>

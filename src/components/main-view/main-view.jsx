@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { setMovies } from '../../actions/actions';
 import MoviesList from '../movies-list/movies-list';
 
-import { Navbar, Container, Col, Row } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 import "./main-view.scss"
 
 import { RegistrationView } from '../registration-view/registration-view';
@@ -105,7 +105,6 @@ class MainView extends React.Component {
                         }} />
 
                         <Route path={"/users/:userId"} render={({ history }) => {
-                            if (!user) return <Redirect to="/" />
                             return (
                                 <Col >
                                     <ProfileView user={user} movies={movies} onBackClick={() => history.goBack()} />
