@@ -1,12 +1,17 @@
-.navbar-main {
+.navbar {
+    // display: flex;
+    // justify-content: space-between;
+}
+
+.navbar-container {
+    width: 100%;
+    
 }
 
 .navbar-title {
 
-}
-
-.navbar-container {
-
+    font-size: 40px;
+    text-align: center;
 }
 
 .navbar-button {
@@ -14,20 +19,27 @@
     color: black;
     border: none;
     width: 100%;
+    font-size: 22px;
 }
 
 .navbar-button:hover {
-    background-color: rgb(122, 43, 43);
+    background-color: rgb(66, 65, 65);
 }
 
 .nav-link {
-    color: black;
+    // color: black;
     background-color: transparent;
     margin-right: 10px;
     border-radius: 4px;
     width: 100%;
 }
 
-.navbar-profile:hover {
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: white;
     background-color: rgb(122, 43, 43);
 }

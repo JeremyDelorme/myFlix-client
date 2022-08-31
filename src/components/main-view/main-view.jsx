@@ -78,7 +78,7 @@ class MainView extends React.Component {
         return (
             <Router>
                 <NavbarView user={user} />
-                <Container className='main-container' fluid>
+                <Container fluid>
                     <Row >
                         <Route exact path="/" render={() => {
                             if (!user) return <Col>

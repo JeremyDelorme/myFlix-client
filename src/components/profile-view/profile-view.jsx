@@ -187,7 +187,9 @@ export class ProfileView extends React.Component {
         }
 
         return (
+
             <Container className="profile-view">
+                <h3>{Username}</h3>
                 <Row>
                     <Col>
                         <Card className="profile-view-card">
@@ -259,19 +261,18 @@ export class ProfileView extends React.Component {
                         </Card>
                     </Col>
                 </Row>
-                <Row className="favorite-container">
+                <Row className="profile-fav-container">
                     <Col>
-                        <h3>{Username}</h3>
                         <h4>Favorite movies</h4>
                     </Col>
                 </Row>
                 <Row fluid>
-                    <Col fluid>
-                        <Card.Body>
+                    <Col className='profile-fav-col' fluid>
+                        <Card.Body className='profile-fav-card-body'>
                             {FavoriteMovies.length === 0 && (
                                 <div className="text-center">No Favorite Movies</div>
                             )}
-                            <Row fluid className='profile-movie-row'>
+                            <Row fluid className='profile-fav-row'>
                                 {FavoriteMovies.length > 0 &&
                                     movies.map((movie) => {
                                         if (
@@ -279,19 +280,22 @@ export class ProfileView extends React.Component {
                                             FavoriteMovies.find((fav) => fav === movie._id)
                                         ) {
                                             return (
-                                                <Card className="favorite-movie" key={movie._id} >
-                                                    <Card.Img
-                                                        className="fav-poster"
-                                                        variant="top"
-                                                        src={movie.ImagePath}
-                                                    />
-                                                    <Card.Body >
-                                                        <Card.Title className="movie_title">
-                                                            {movie.Title}
-                                                        </Card.Title>
-                                                        <Button size="sm" className='remove-buttons' value={movie._id} onClick={(e) => this.onRemoveFavorite(e, movie)}>Remove</Button>
-                                                    </Card.Body>
-                                                </Card>
+                                                <Col className='profile-fav-col2' >
+                                                    <Card className="profile-fav-card" key={movie._id} >
+                                                        <Card.Img
+                                                            className="profile-fav-img"
+                                                            variant="top"
+                                                            src={movie.ImagePath}
+                                                        />
+                                                        <Card.Body >
+                                                            <Card.Title className="profile-fav-card-title">
+                                                                {movie.Title}
+                                                            </Card.Title>
+                                                            <Button size="sm" className='buttons-design' value={movie._id} onClick={(e) => this.onRemoveFavorite(e, movie)}>Remove</Button>
+                                                        </Card.Body>
+                                                    </Card>
+                                                </Col>
+
                                             );
                                         }
                                     })}

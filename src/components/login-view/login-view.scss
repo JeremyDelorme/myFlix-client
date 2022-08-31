@@ -1,0 +1,54 @@
+.login-container {
+    justify-content: center;
+    padding: 100px;
+    width: 100%;
+}
+
+.login-card {
+
+}
+
+.login-form {
+
+    justify-content: space-between;
+}
+
+// .login-buttons-below {
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+.login-register-now {
+    background-color: #fa8365;
+    border: none;
+    padding: 10px;
+    margin: 20px;
+}
+
+.login-register-now:hover {
+    background-color: #92d7ff;
+    color: black;
+    border: none;
+}
+
+.login-submit-button {
+    background-color: #ffaaaf;
+    border: none;
+}
+
+.login-submit-button:hover {
+    background-color: rgb(122, 43, 43);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+.login-buttons-below {
+
+}
+
+.login-div-submit-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 20px;
+}

@@ -1,44 +1,39 @@
-h3 {
-  padding-bottom: 20px;
+.profile-fav-col2 {
+  padding-bottom: 30px;
 }
 
-.favorite-container {
+.profile-fav-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
+  height: 100%;
+  padding: 30px;
 }
 
-.favorite-movie {
-  padding: 20px;
-  margin: 20px;
-  max-width: 100%;
-}
-
-.fav-poster {
-  width: 100%;
-}
-
-.profile-movie-row {
-  width: 100%;
-}
-
-.row {
-  width: 100%;
-}
-
-.buttons-design {
-  border: none;
-  margin-top: 50px;
-}
-
-.buttons-design:hover {
-  background-color: #7a2b2b;
+.profile-fav-img {
+  width: 250px;
+  height: 75%;
+  width: 80%;
+  padding: 30px;
 }
 
 .remove-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   background-color: #7a2b2b;
   border: none;
 }

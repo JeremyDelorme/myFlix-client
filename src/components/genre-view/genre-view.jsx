@@ -13,18 +13,18 @@ export class GenreView extends React.Component {
         return (
             <Container fluid>
                 <Card>
-                    <Card.Body className="genre-card-body">
-                        <Card.Title className="genre-title">Genre</Card.Title>
+                    <Card.Body>
+                        <Card.Title>Genre</Card.Title>
                         <Card.Text>
-                            <span className="label">Name: </span>
-                            <span className="value">{genre.Name}</span>
+                            <span>Name: </span>
+                            <span>{genre.Name}</span>
                         </Card.Text>
                         <Card.Text>
-                            <span className="label">Description: </span>
-                            <span className="value">{genre.Description}</span>
+                            <span>Description: </span>
+                            <span>{genre.Description}</span>
                         </Card.Text>
 
-                        <Button variant="outline-light" onClick={() => { onBackClick(); }}>Back</Button>
+                        <Button onClick={() => { onBackClick(); }}>Back</Button>
                     </Card.Body>
                 </Card>
                 {/* <Row>

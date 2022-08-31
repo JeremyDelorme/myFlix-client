@@ -24,14 +24,14 @@ function MoviesList(props) {
     return <>
         <Container fluid >
             <Row >
-                <Col xs={6} md={3} >
+                <Col className="filter-input" >
                     <VisibilityFilterInput visibilityFilter={visibilityFilter} />
                 </Col>
             </Row>
             <Row >
                 {filteredMovies.map(m => (
-                    <Col xs={6} md={3} className='movie-list-col mb-3 pb-3' key={m._id}>
-                        <MovieCard className="movie-list-card" movie={m} />
+                    <Col sm={6} md={4} lg={3} key={m._id}>
+                        <MovieCard movie={m} />
                     </Col>
                 ))}
             </Row>

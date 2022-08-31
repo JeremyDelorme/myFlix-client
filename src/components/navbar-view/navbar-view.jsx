@@ -24,7 +24,7 @@ export function NavbarView({ user }) {
     };
 
     return (
-        <Navbar className="navbar-main">
+        <Navbar fluid >
             <Container className="navbar-container">
                 <Navbar.Brand className="navbar-title" as={Link} to={"/"}>myFlix</Navbar.Brand>
                 {isAuth() && (

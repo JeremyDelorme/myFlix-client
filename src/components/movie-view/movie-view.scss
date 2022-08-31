@@ -24,8 +24,14 @@
 }
 
 .buttons-design {
-    background-color: rgb(230, 169, 119);
+    background-color: rgb(255, 202, 202);
     color: rgb(0, 0, 0);
+    margin: 20px;
+    border: none;
+}
+
+.buttons-design:hover {
+    background-color: rgb(122, 43, 43);
 }
 
 .movie-view-col {
@@ -43,4 +49,8 @@
 
 .card-text {
     margin: 30px;
+}
+
+.movie-card-card-group {
+    padding-bottom: 20px;
 }

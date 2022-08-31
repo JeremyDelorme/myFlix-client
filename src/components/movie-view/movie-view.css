@@ -34,8 +34,14 @@
 }
 
 .buttons-design {
-  background-color: #e6a977;
+  background-color: #ffcaca;
   color: black;
+  margin: 20px;
+  border: none;
+}
+
+.buttons-design:hover {
+  background-color: #7a2b2b;
 }
 
 .movie-view-col {
@@ -60,5 +66,9 @@
 
 .card-text {
   margin: 30px;
+}
+
+.movie-card-card-group {
+  padding-bottom: 20px;
 }
 /*# sourceMappingURL=movie-view.css.map */

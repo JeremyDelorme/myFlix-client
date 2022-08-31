@@ -11,29 +11,29 @@ export class DirectorView extends React.Component {
         const { director, onBackClick, movies } = this.props;
 
         return (
-            <Container fluid className="director-container">
-                <Row className="director-text-row">
+            <Container fluid>
+                <Row>
                     <Card fluid>
-                        <Card.Body className="director-card-body" fluid>
-                            <Card.Title className="director-title">Director</Card.Title>
-                            <Card.Text className="director-bio">
-                                <span className="label"></span>
-                                <span className="value">{director.Name}</span>
+                        <Card.Body fluid>
+                            <Card.Title>Director</Card.Title>
+                            <Card.Text>
+                                <span></span>
+                                <span>{director.Name}</span>
                             </Card.Text>
                             <Card.Text>
-                                <span className="label"></span>
-                                <span className="value">{director.Bio}</span>
+                                <span></span>
+                                <span>{director.Bio}</span>
                             </Card.Text>
                             <Card.Text>
-                                <span className="label">Birth: </span>
-                                <span className="value">{director.Birth}</span>
+                                <span>Birth: </span>
+                                <span>{director.Birth}</span>
                             </Card.Text>
                             <Card.Text>
-                                <span className="label">Death: </span>
-                                <span className="value">{director.Death}</span>
+                                <span>Death: </span>
+                                <span>{director.Death}</span>
                             </Card.Text>
 
-                            <Button variant="outline-light" onClick={() => { onBackClick(); }}>Back</Button>
+                            <Button onClick={() => { onBackClick(); }}>Back</Button>
                         </Card.Body>
                     </Card>
                 </Row>

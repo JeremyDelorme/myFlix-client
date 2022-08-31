@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PropTypes } from 'prop-types';
 import { Button, Form, Container, Col, Row, CardGroup, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './login-view.scss';
 import axios from 'axios';
 
@@ -55,13 +56,13 @@ export function LoginView(props) {
 
     return (
         <Container className='login-container'>
-            <Row className='login-row'>
-                <Col className='login-col'>
-                    <CardGroup className='login-card-group'>
-                        <Card className="login-card">
-                            <Card.Body className='login-card-body'>
-                                <Card.Title className="login-title">Please login</Card.Title>
-                                <Form>
+            <Row>
+                <Col>
+                    <CardGroup>
+                        <Card className='login-card' >
+                            <Card.Body >
+                                <Card.Title>Please login</Card.Title>
+                                <Form className='login-form' >
                                     <Form.Group>
                                         <Form.Label>Username:</Form.Label>
                                         <Form.Control
@@ -80,13 +81,20 @@ export function LoginView(props) {
                                         {/* code added here to display validation error */}
                                         {passwordErr && <p>{passwordErr}</p>}
                                     </Form.Group>
+                                    <div className='login-div-submit-button'>
+                                        <Button
+                                            className='login-submit-button'
+                                            type="submit"
+                                            onClick={handleSubmit}>Submit
+                                        </Button>
+                                    </div>
 
-                                    <Button
-                                        className="buttons-design"
-                                        variant="primary"
-                                        type="submit"
-                                        onClick={handleSubmit}>Submit
-                                    </Button>
+                                    <div className='login-buttons-below' >
+                                        <Link to={`/register`}>
+                                            <Button className='login-register-now'>Register Now!</Button>
+                                        </Link>
+                                    </div>
+
                                 </Form>
                             </Card.Body>
                         </Card>
