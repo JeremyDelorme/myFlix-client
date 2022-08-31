@@ -40,16 +40,18 @@
 
 .remove-buttons:hover {
   background-color: #e6a977;
-  /* color: black; */
 }
 
 .back-button {
-  background-color: #7a2b2b;
-  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .back-button:hover {
-  background-color: #e6a977;
-  /* color: black; */
+  background-color: transparent;
 }
 /*# sourceMappingURL=profile-view.css.map */

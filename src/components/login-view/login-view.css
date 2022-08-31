@@ -6,6 +6,16 @@
   width: 100%;
 }
 
+.login-card-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 26px;
+}
+
 .login-form {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -13,7 +23,7 @@
 }
 
 .login-register-now {
-  background-color: #fa8365;
+  background-color: #ff5226;
   border: none;
   padding: 10px;
   margin: 20px;
@@ -26,13 +36,13 @@
 }
 
 .login-submit-button {
-  background-color: #ffaaaf;
+  background-color: #fa8365;
   border: none;
 }
 
 .login-submit-button:hover {
-  background-color: #7a2b2b;
-  color: white;
+  background-color: rgba(255, 193, 22, 0.76);
+  color: black;
   border: none;
 }
 
