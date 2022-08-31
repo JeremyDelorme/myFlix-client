@@ -26,7 +26,7 @@ export function NavbarView({ user }) {
     return (
         <Navbar fluid >
             <Container className="navbar-container">
-                <Navbar.Brand className="navbar-title" as={Link} to={"/"}>myFlix</Navbar.Brand>
+                <Navbar.Brand className="navbar-title" as={Link} to={"/"} >myFlix</Navbar.Brand>
                 {isAuth() && (
                     <Nav>
                         <Nav.Link as={Link} to={"/users/user._id"}>Profile</Nav.Link>
@@ -34,6 +34,6 @@ export function NavbarView({ user }) {
                     </Nav>
                 )}
             </Container>
-        </Navbar>
+        </Navbar >
     )
 }

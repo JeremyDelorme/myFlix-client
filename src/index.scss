@@ -1,15 +1,19 @@
 
 html, body {
-  background-color: #fff6dd;
+  // background-color: #fff6dd;
+  background-color: #111111;
   font-family: 'Josefin Sans', sans-serif;
-  color: black;
   font-weight: bold;
+}
+
+a {
+  color: beige;
 }
 
 h2 {
   font-size: 40px;
   text-align: center;
-  color: black;
+  color: beige;
   font-weight: bold;
 }
 
@@ -19,18 +23,31 @@ h3 {
   font-weight: bold;
   padding-top: 20px;
   padding-bottom: 50px;
+  color: beige;
 }
 
 h4 {
   text-align: center;
   font-size: 30px;
   padding-top: 60px;
+  color: beige;
 }
 
 .container {
 
 }
 
+.navbar-light .navbar-brand {
+  color: beige;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: rgb(155, 155, 155);
+}
+
+.navbar-light .navbar-brand:focus {
+  color: rgb(155, 155, 155);
+}
 
 
 

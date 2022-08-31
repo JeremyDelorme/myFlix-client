@@ -9,7 +9,7 @@
 
 .navbar-button {
   background-color: transparent;
-  color: black;
+  /* color: black; */
   border: none;
   width: 100%;
   font-size: 22px;
@@ -27,7 +27,7 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: black;
+  /* color: black; */
   font-size: 22px;
 }
 

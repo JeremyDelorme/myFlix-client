@@ -303,8 +303,8 @@ export class ProfileView extends React.Component {
                         </Card.Body>
                     </Col>
                 </Row>
-                <div className="backButton">
-                    <Button className='back-button' onClick={() => { onBackClick(null); }}>Back</Button>
+                <div className='back-button' >
+                    <Button className='buttons-design' onClick={() => { onBackClick(null); }}>Back</Button>
                 </div>
                 <br />
             </Container >

@@ -40,7 +40,7 @@
 
 .remove-buttons:hover {
   background-color: #e6a977;
-  color: black;
+  /* color: black; */
 }
 
 .back-button {
@@ -50,6 +50,6 @@
 
 .back-button:hover {
   background-color: #e6a977;
-  color: black;
+  /* color: black; */
 }
 /*# sourceMappingURL=profile-view.css.map */

@@ -61,7 +61,7 @@ export function LoginView(props) {
                     <CardGroup>
                         <Card className='login-card' >
                             <Card.Body >
-                                <Card.Title>Please login</Card.Title>
+                                <Card.Title className='login-card-title' >Please login</Card.Title>
                                 <Form className='login-form' >
                                     <Form.Group>
                                         <Form.Label>Username:</Form.Label>

@@ -43,15 +43,15 @@
 
 .remove-buttons:hover {
     background-color: rgb(230, 169, 119);
-    color: black;
+    // color: black;
 }
 
 .back-button {
-    background-color: rgb(122, 43, 43);
-    border: none;
+display: flex;
+justify-content: flex-end;
 }
 
 .back-button:hover {
-    background-color: rgb(230, 169, 119);
-    color: black;
+    background-color: transparent
+    // color: black;
 }
