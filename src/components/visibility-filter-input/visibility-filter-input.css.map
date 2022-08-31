@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,wBAAwB,CAAC;EACrB,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,IAAI;EACnB,eAAe,EAAE,QAAQ;EACzB,WAAW,EAAE,IAAI;EACjB,KAAK,EAAE,GAAG;CACb;;AAED,AAAA,aAAa,CAAC;EACV,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,IAAI;EACnB,eAAe,EAAE,QAAQ;EACzB,YAAY,EAAE,IAAI;EAClB,KAAK,EAAE,GAAG;CACb",
-    "sources": [
-        "visibility-filter-input.scss"
-    ],
-    "names": [],
-    "file": "visibility-filter-input.css"
-}
