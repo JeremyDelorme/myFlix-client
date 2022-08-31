@@ -32770,7 +32770,7 @@ function RegistrationView(props) {
             const data = response.data;
             console.log(data);
             alert("registration successful, please login!");
-            window.open("/", "_self"); // the second argument '_self' is necessary so that the page will open in the current tab
+            window.open("/myFlix-client", "_self"); // the second argument '_self' is necessary so that the page will open in the current tab
         }).catch((e)=>{
             console.log("error registering the user");
             alert("Unable to register");
@@ -37637,7 +37637,7 @@ class ProfileView extends (0, _reactDefault.default).Component {
             alert("Profile deleted");
             localStorage.removeItem("user");
             localStorage.removeItem("token");
-            window.open("/", "_self");
+            window.open("/myFlix-client", "_self");
         }).catch(function(error) {
             console.log(error);
         });

@@ -147,7 +147,7 @@ export class ProfileView extends React.Component {
                 alert("Profile deleted");
                 localStorage.removeItem('user');
                 localStorage.removeItem('token');
-                window.open('/', '_self');
+                window.open('/myFlix-client', '_self');
             })
             .catch(function (error) {
                 console.log(error);
