@@ -71,12 +71,6 @@ class MainView extends React.Component {
 
 
 
-    onRegistration(register) {
-        this.setState({
-            register
-        });
-    }
-
     render() {
         let { movies } = this.props;
         let { user } = this.state;
@@ -144,6 +138,7 @@ class MainView extends React.Component {
             </Router>
         );
     }
+}
 
 let mapStateToProps = state => {
     return { movies: state.movies }
