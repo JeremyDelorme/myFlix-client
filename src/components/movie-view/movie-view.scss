@@ -1,32 +1,57 @@
+.movie-view-container {
+    display: flex;
+    flex-direction: column;
+}
 
+.movie-view-img {
+    display: flex;
+    width: 70%;
+    max-height: 10%;
+    padding-top: 40px;
+}
 
-.moviesContainer {
-	background: #5c1818;
-	width: 100%;
-	height: 100vh;
-  }
-  
-  .movie-view {
-	margin-top: 50px;
-	color: white;
-  }
-  
-  .movie-poster {
-	text-align: center;
-  }
-  .title, .description, .genre, .director, .actors, .year  {
-	color: black;
-	font-size: 20px;
-	font-weight: 400;
-  }
-  
-  .movie-button-div{
-	text-align: center;
-	margin: 0 auto;
-	width: 200px;
-  }
-  .movie-button {
-	margin-top: 20px;
-	width: 100%;
-	background-color: black;
-  }
+.card-text {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 22px;
+}
+
+.buttons-row {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.buttons-design {
+    background-color: #fa8365;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    border: none;
+}
+
+.buttons-design:hover {
+    background-color: rgba(255, 193, 22, 0.76);
+    color: black;
+}
+
+.movie-view-col {
+    align-items: stretch;
+}
+
+.movie-view-card-body {
+    display: flex;
+    min-height: 375px;
+    background-color: none;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-text {
+    margin: 30px;
+}
+
+.movie-card-card-group {
+    padding-bottom: 20px;
+}

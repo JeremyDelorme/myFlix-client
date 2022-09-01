@@ -1,0 +1,57 @@
+.profile-fav-col2 {
+  padding-bottom: 30px;
+}
+
+.profile-fav-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+.profile-fav-img {
+  width: 250px;
+  height: 75%;
+  width: 80%;
+  padding: 30px;
+}
+
+.remove-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: #7a2b2b;
+  border: none;
+}
+
+.remove-buttons:hover {
+  background-color: #e6a977;
+}
+
+.back-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.back-button:hover {
+  background-color: transparent;
+}
+/*# sourceMappingURL=profile-view.css.map */

@@ -1,6 +1,4 @@
-
 html, body {
-  // background-color: #fff6dd;
   background-color: #111111;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
@@ -33,25 +31,15 @@ h4 {
   color: beige;
 }
 
-.container {
-
-}
-
 .navbar-light .navbar-brand {
   color: beige;
 }
 
 .navbar-light .navbar-brand:hover {
-  color: rgb(155, 155, 155);
+  color: #9b9b9b;
 }
 
 .navbar-light .navbar-brand:focus {
-  color: rgb(155, 155, 155);
+  color: #9b9b9b;
 }
-
-
-
-
-
-
-
+/*# sourceMappingURL=index.css.map */

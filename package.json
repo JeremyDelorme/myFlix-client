@@ -1,10 +1,14 @@
 {
   "name": "myflix-client",
+  "homepage": "http://JeremyDelorme.github.io/myFlix-client",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build"
   },
   "repository": {
     "type": "git",
@@ -15,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/JeremyDelorme/myFlix-client/issues"
   },
-  "homepage": "https://github.com/JeremyDelorme/myFlix-client#readme",
   "dependencies": {
     "axios": "^0.26.1",
     "prop-types": "^15.8.1",

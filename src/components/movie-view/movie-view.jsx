@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import "./movie-view.scss"
-
 import { Card, Col, Container, Row, Button } from "react-bootstrap"
+import "./movie-view.scss"
+import axios from 'axios';
+
+import { Link } from 'react-router-dom'
 
 export class MovieView extends React.Component {
     keypressCallback(event) {
@@ -14,30 +16,56 @@ export class MovieView extends React.Component {
     componentWillUnmount() {
         document.removeEventListener('keypress', this.keypressCallback);
     }
+
+    addToFavoriteList(movieId) {
+        const currentUser = localStorage.getItem('user');
+        const token = localStorage.getItem('token');
+        axios.patch(`https://movie-api-jeremydelorme.herokuapp.com/users/${currentUser}/movies/${movieId}`,
+            {},
+            {
+                headers: { Authorization: `Bearer ${token}` }
+            })
+            .then((response) => {
+                console.log(response.data)
+                alert(`The movie was successfully add to your list.`)
+            }).
+            catch(error => console.error(error))
+    }
+
     render() {
-        const { movie, onBackClick } = this.props;
+        const { movie } = this.props;
 
         return (
-            <Container>
-                <Row>
-                    <Col>
-                        <Card id="movie-view">
-                            <Card.Body>
-                                <Card.Title id="movie-title" className="movie-title">{movie.Title}</Card.Title>
-                                <Card.Text id="movie-description" className="movie-description">
+            <Container className='movie-view-container'>
+
+                <h2 >{movie.Title}</h2>
+                <Row >
+                    <Col className='movie-view-col'>
+                        <Card >
+                            <Card.Body className='movie-view-card-body'>
+                                <Card.Img className='movie-view-img' src={movie.ImagePath} />
+                                <Card.Text >
                                     {movie.Description}</Card.Text>
-                                <Card.Text id="movie-director" className="movie-director">
-                                    Director: {movie.Director.Name}</Card.Text>
-                                <Card.Text id="movie-genre" className="movie-gerne">
-                                    Genre: {movie.Genre.Name}</Card.Text>
-                                <Card.Img id="movie-view-image" variant="top" src={movie.ImagePath} />
+                                <Card.Text className='card-text'>
+                                    Director: {movie.Director.Name}
+                                </Card.Text>
+                                <Card.Text>
+                                    Genre: {movie.Genre.Name}
+                                </Card.Text>
                             </Card.Body>
                         </Card>
-                        <Button id="movie-view-button" onClick={() => { onBackClick(null); }}>Back</Button>
-                        <Button id="movie-view-button" onClick={() => { }}>Add to favorites</Button>
                     </Col>
                 </Row>
-            </Container>
+                <Row className='buttons-row'>
+                    <Link to={"/"}>
+                        <Button className='buttons-design'>Back to full list</Button>
+                    </Link>
+                    <Link to={`/movies/${movie._id}`}>
+                        <Button className='buttons-design' onClick={() => this.addToFavoriteList(movie._id)}>Add to favorites</Button>
+                    </Link>
+                </Row>
+
+            </Container >
         );
     }
 }
@@ -57,5 +85,5 @@ MovieView.propTypes = {
         ImagePath: PropTypes.string.isRequired
     }).isRequired,
 
-    onBackClick: PropTypes.string.isRequired
+    onBackClick: PropTypes.func.isRequired
 };

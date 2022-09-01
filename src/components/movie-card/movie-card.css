@@ -1,0 +1,26 @@
+.movie-card-container {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.movie-card-card-body {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding-bottom: 20px;
+  height: null;
+  background-color: #fff9f9;
+}
+
+.movie-card-card-group {
+  text-align: center;
+  height: 100%;
+}
+
+.movie-card-img {
+  max-width: 80%;
+  height: 100%;
+  padding-bottom: 20px;
+}
+/*# sourceMappingURL=movie-card.css.map */
